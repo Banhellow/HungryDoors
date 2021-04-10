@@ -3,11 +3,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject.SpaceFighter;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
     private CharacterController characterController;
+    private Camera mainCamera;
+    private Plane groundPlane;
+    private Vector3 lookAtPosition;
+
+    public Transform playerRotatorTR;
     public float movementSpeed = 10;
     [ReadOnly] public Vector2 currentMovementInput;
     [ReadOnly] public bool useItemRequaired = false;
@@ -16,6 +22,9 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+
+        mainCamera = Camera.main;
+        groundPlane = new Plane(Vector3.up, Vector3.zero);
     }
 
     void Update()
@@ -26,9 +35,19 @@ public class PlayerController : MonoBehaviour
 
     private void ReadInput()
     {
+        // movement
         currentMovementInput.x = Input.GetAxisRaw("Horizontal");
         currentMovementInput.y = Input.GetAxisRaw("Vertical");
         currentMovementInput.Normalize();
+
+        // rotation
+        Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+        float rayLength;
+        if (groundPlane.Raycast(cameraRay, out rayLength))
+        {
+            lookAtPosition = cameraRay.GetPoint(rayLength);
+            Debug.DrawLine(cameraRay.origin, lookAtPosition, Color.blue);
+        }
 
         if (Input.GetMouseButtonDown(0))
             useItemRequaired = true;
@@ -39,7 +58,11 @@ public class PlayerController : MonoBehaviour
 
     private void HandleInput()
     {
-        characterController.Move(new Vector3() * movementSpeed * Time.deltaTime);
+        // movement rotateed by 45deg to compensate for isometric camera.
+        // gravity added manualy
+        characterController.Move((Quaternion.Euler(0, 45, 0) * new Vector3(currentMovementInput.x, Physics.gravity.y, currentMovementInput.y)) * movementSpeed * Time.deltaTime);
+
+        playerRotatorTR.LookAt(new Vector3(lookAtPosition.x, playerRotatorTR.position.y, lookAtPosition.z));
 
         if (useItemRequaired)
         {
