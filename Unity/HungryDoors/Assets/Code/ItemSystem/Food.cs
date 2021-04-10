@@ -6,10 +6,10 @@ public class Food : Item
 {
     private void Start()
     {
-        Use();
+
     }
     public override void Use()
     {
-        Debug.Log("Food is Used");
+        Debug.Log("Food is Used, food type: " + data.foodType);
     }
 }

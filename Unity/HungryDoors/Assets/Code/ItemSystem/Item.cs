@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[Serializable]
+[RequireComponent(typeof(ItemData))]
 public class Item: MonoBehaviour, IUsable
 {
-    private GameObject itemVFX;
+    protected ItemData data;
+    public GameObject itemVFX;
     private bool _isInUsage = false;
     public bool isInUsage { get => _isInUsage; set => _isInUsage = value; }
 
+    private void Awake()
+    {
+        data = GetComponent<ItemData>();
+    }
+
     private void Start()
     {
+
         Use();
     }
     public virtual void Use()
