@@ -17,5 +17,5 @@ public enum WeaponType
 {
     melee,
     shoot,
-    magic,
+    projectile,
 }
