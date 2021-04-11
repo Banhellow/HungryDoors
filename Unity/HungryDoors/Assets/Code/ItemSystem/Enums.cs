@@ -19,3 +19,9 @@ public enum WeaponType
     shoot,
     projectile,
 }
+
+public enum AnimationType
+{
+    attack,
+    shoot,
+}

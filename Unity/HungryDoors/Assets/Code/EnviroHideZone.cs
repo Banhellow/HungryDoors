@@ -5,7 +5,13 @@ using UnityEngine;
 public class EnviroHideZone : MonoBehaviour
 {
     public GameObject enviroVisuals;
+    private MeshRenderer[] allRenderers;
     int counter = 0;
+
+    private void Awake()
+    {
+        allRenderers = enviroVisuals.GetComponentsInChildren<MeshRenderer>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,9 +33,22 @@ public class EnviroHideZone : MonoBehaviour
 
     private void UpdateVisibility()
     {
-        if(counter > 0)
-            enviroVisuals.SetActive(false);
+        if (counter > 0)
+        {
+            //enviroVisuals.SetActive(false);
+            for (int i = 0; i < allRenderers.Length; i++)
+            {
+                allRenderers[i].shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+            }
+        }
         else
-            enviroVisuals.SetActive(true);
+        {
+            //enviroVisuals.SetActive(true);
+            for (int i = 0; i < allRenderers.Length; i++)
+            {
+                allRenderers[i].shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            }
+        }
+
     }
 }

@@ -19,6 +19,20 @@ public class PlayerController : MonoBehaviour
     [ReadOnly] public bool useItemRequaired = false;
     [ReadOnly] public bool pickupItemRequaired = false;
 
+    [Header("Items")]
+    [ReadOnly] public Item currentItem;
+    public LayerMask pickupLayerMask;
+    public Transform pickupSphereCenter;
+    public float pickupSphereRadius = 1;
+    public Transform rightArmHandleTR;
+
+    [Header("Animations")]
+    public Animator animator;
+    private const string isMovingParam = "IsMoving";
+    private const string attackParam = "Attack";
+    private const string shootParam = "Shoot";
+    private const string pickupParam = "PickupItem";
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -31,7 +45,9 @@ public class PlayerController : MonoBehaviour
     {
         ReadInput();
         HandleInput();
+        HandleAnimator();
     }
+
 
     private void ReadInput()
     {
@@ -68,14 +84,52 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Item used tmp");
             useItemRequaired = false;
+
+            if (currentItem == null)
+                return;
+
+            switch (currentItem.data.animationType)
+            {
+                case AnimationType.attack:
+                    animator.SetTrigger(attackParam);
+                    break;
+                case AnimationType.shoot:
+                    animator.SetTrigger(shootParam);
+                    break;
+            }
+
         }
 
         if (pickupItemRequaired)
         {
             Debug.Log("Item pickup tmp");
             pickupItemRequaired = false;
+            animator.SetTrigger(pickupParam);
+
+            Collider[] allColliders = Physics.OverlapSphere(pickupSphereCenter.position, pickupSphereRadius, pickupLayerMask);
+            for (int i = 0; i < allColliders.Length; i++)
+            {
+                Item item = allColliders[i].GetComponent<Item>();
+                if (item != null)
+                {
+                    currentItem = item;
+                    item.OnPickup(rightArmHandleTR);
+                    return;
+                }
+            }
+
         }
     }
+
+    private void HandleAnimator()
+    {
+        if (currentMovementInput.magnitude > 0.1f)
+            animator.SetBool(isMovingParam, true);
+        else
+            animator.SetBool(isMovingParam, false);
+    }
+
+
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {

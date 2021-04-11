@@ -6,4 +6,5 @@ public class ItemData : MonoBehaviour
 {
     public FoodType foodType;
     public WeaponType weaponType;
+    public AnimationType animationType;
 }
