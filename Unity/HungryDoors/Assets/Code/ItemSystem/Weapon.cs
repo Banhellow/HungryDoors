@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Food : Item
+public class Weapon : Item
 {
+    public ParticleSystem shootParticle;
+
+
     private void Start()
     {
 
     }
+
     public override void Use()
     {
-        Debug.Log("Food is Used, food type: " + data.foodType);
+        shootParticle.Play();
         base.Use();
     }
+
+
 }
