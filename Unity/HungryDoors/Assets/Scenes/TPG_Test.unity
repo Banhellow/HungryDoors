@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2849406, g: 0.3713998, b: 0.49681896, a: 1}
+  m_IndirectSpecularColor: {r: 0.2849396, g: 0.3713986, b: 0.4968177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -29865,7 +29865,9 @@ GameObject:
   - component: {fileID: 2080666294}
   - component: {fileID: 2080666293}
   - component: {fileID: 2080666292}
-  m_Layer: 0
+  - component: {fileID: 2080666295}
+  - component: {fileID: 2080666296}
+  m_Layer: 11
   m_Name: BigDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29895,7 +29897,7 @@ BoxCollider:
   m_GameObject: {fileID: 2080666290}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 0.99999994, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -29946,6 +29948,32 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080666290}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2080666295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080666290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61eb2deabfbb9784aa390fec8327e1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preferedFoodType: 2
+--- !u!65 &2080666296
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080666290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.99999994, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2098796909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ead2b5ece7b49140ac5cdd660394b41,
@@ -30750,10 +30778,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3910256701934982468, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickupItem
+      objectReference: {fileID: 0}
     - target: {fileID: 4216895447387924834, guid: 2c6c8567c3e2aad41bed6f27e810f754,
         type: 3}
       propertyPath: m_Name
       value: PickupItem_prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216895447387924857, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+        type: 3}
+      propertyPath: foodType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4216895447387924863, guid: 2c6c8567c3e2aad41bed6f27e810f754,
         type: 3}

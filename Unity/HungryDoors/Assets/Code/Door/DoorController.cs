@@ -19,11 +19,11 @@ public class DoorController : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if(collision.collider.tag == Tags.PICKUP_ITEM)
+        if(collision.tag == Tags.PICKUP_ITEM)
         {
-            var itemData = GetComponent<ItemData>();
+            var itemData = collision.GetComponentInParent<ItemData>();
             string phrase;
             switch (itemData.type)
             {
