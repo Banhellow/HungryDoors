@@ -23,7 +23,7 @@ public class ItemEditor : EditorWindow
         GUILayout.Space(2f);
         if (GUILayout.Button("AddSimpleItem"))
         {
-            MarkAsItem(ItemType.Shoot);
+            MarkAsItem(ItemType.Weapon);
         }
         GUILayout.Space(10f);
         GUILayout.Label("Objects selected: " + Selection.objects.Length);

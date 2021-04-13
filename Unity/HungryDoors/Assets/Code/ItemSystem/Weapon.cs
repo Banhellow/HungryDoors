@@ -9,7 +9,7 @@ public class Weapon : Item
 
     private void Start()
     {
-
+        data.type = ItemType.Weapon;
     }
 
     public override void Use()

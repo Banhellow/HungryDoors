@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemData : MonoBehaviour
 {
+    public ItemType type;
     public FoodType foodType;
     public WeaponType weaponType;
     public AnimationType animationType;
