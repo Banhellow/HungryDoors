@@ -6,13 +6,9 @@ using UnityEngine;
 using Zenject.SpaceFighter;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : Character
 {
-    private CharacterController characterController;
-    private Camera mainCamera;
-    private Plane groundPlane;
-    private Vector3 lookAtPosition;
-
+    [Header("Character controller")]
     public Transform playerRotatorTR;
     public float movementSpeed = 10;
     [ReadOnly] public Vector2 currentMovementInput;
@@ -26,12 +22,11 @@ public class PlayerController : MonoBehaviour
     public float pickupSphereRadius = 1;
     public Transform rightArmHandleTR;
 
-    [Header("Animations")]
-    public Animator animator;
-    private const string isMovingParam = "IsMoving";
-    private const string attackParam = "Attack";
-    private const string shootParam = "Shoot";
-    private const string pickupParam = "PickupItem";
+
+    private CharacterController characterController;
+    private Camera mainCamera;
+    private Plane groundPlane;
+    private Vector3 lookAtPosition;
 
     private void Awake()
     {
@@ -127,6 +122,12 @@ public class PlayerController : MonoBehaviour
             animator.SetBool(isMovingParam, true);
         else
             animator.SetBool(isMovingParam, false);
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        Debug.Log($"Player dead.");
     }
 
 
