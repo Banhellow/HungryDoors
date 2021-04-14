@@ -3,11 +3,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 using Zenject.SpaceFighter;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : Character
 {
+    [Inject]
+    public  GUIManager guiManager;
+    private LifeController myLifeController;
+
     [Header("Character controller")]
     public Transform playerRotatorTR;
     public float movementSpeed = 10;
@@ -28,9 +33,16 @@ public class PlayerController : Character
     private Plane groundPlane;
     private Vector3 lookAtPosition;
 
+    //[Inject]
+    //private void Construct(GUIManager _guiManager)
+    //{
+    //    guiManager = _guiManager;
+    //}
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        myLifeController = GetComponent<LifeController>();
 
         mainCamera = Camera.main;
         groundPlane = new Plane(Vector3.up, Vector3.zero);
@@ -109,6 +121,7 @@ public class PlayerController : Character
                 {
                     currentItem = item;
                     item.OnPickup(rightArmHandleTR);
+                    guiManager.UpdatePlayerItem(item);
                     return;
                 }
             }
@@ -122,6 +135,12 @@ public class PlayerController : Character
             animator.SetBool(isMovingParam, true);
         else
             animator.SetBool(isMovingParam, false);
+    }
+
+    public override void OnHealthUpdated(int healthChange)
+    {
+        base.OnHealthUpdated(healthChange);
+        guiManager.UpdatePlayerLife(myLifeController.GetCurrentHealth());
     }
 
     public override void Die()

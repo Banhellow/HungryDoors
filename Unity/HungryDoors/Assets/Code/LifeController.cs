@@ -1,4 +1,5 @@
 ﻿using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,9 +18,15 @@ public class LifeController : MonoBehaviour
         currentHealth = startHealth;
     }
 
+    internal float GetCurrentHealth()
+    {
+        return (float)currentHealth / (float)startHealth;
+    }
+
     public void GetDamage(int damage)
     {
         currentHealth -= damage;
+        myCharacter.OnHealthUpdated(-damage);
 
         // dead
         if (currentHealth <= 0)
@@ -32,6 +39,7 @@ public class LifeController : MonoBehaviour
     public void Heal(int healthPoints)
     {
         currentHealth += healthPoints;
+        myCharacter.OnHealthUpdated(healthPoints);
 
         if (currentHealth > startHealth)
             currentHealth = startHealth;

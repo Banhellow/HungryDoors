@@ -1,4 +1,5 @@
-﻿using NaughtyAttributes;
+﻿using DG.Tweening;
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -34,14 +35,14 @@ public class GUIManager : MonoBehaviour
         }
     }
 
-    public void UpdatePlayerLife()
+    public void UpdatePlayerLife(float lifePercentage)
     {
-
+        lifeFillImage.DOFillAmount(lifePercentage, 0.2f);
     }
 
-    public void UpdatePlayerItem()
+    public void UpdatePlayerItem(Item item)
     {
-
+        playerItemIconImage.sprite = item.data.icon;
     }
 
     /// <summary>

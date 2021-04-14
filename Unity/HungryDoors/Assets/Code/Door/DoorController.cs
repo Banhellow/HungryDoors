@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class DoorController : MonoBehaviour
 {
+    [Inject]
+    private GUIManager guiManager;
     public FoodType preferedFoodType;
     public Conversation conversation;
     void Start()
     {
         conversation = new Conversation();
         string phrase = conversation.GetPhraseByFoodType(FoodType.wooden, false);
+        guiManager.ShowDialogBox(null, phrase, 2);
         Debug.Log(phrase);
     }
 
