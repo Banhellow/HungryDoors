@@ -17,8 +17,22 @@ public class GUIManager : MonoBehaviour
     public CanvasGroup dialogCG;
     public Image dialogPortraitImage;
     public TMP_Text dialogText;
+    private bool isDialogOpen = false;
     private bool dialogAnimationInProgress = false;
+    private float dialogVisibilityTime;
+    private bool forceEndTextAnim = false;
 
+
+    private void Update()
+    {
+        if(isDialogOpen)
+        {
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                forceEndTextAnim = true;
+            }
+        }
+    }
 
     public void UpdatePlayerLife()
     {
@@ -30,11 +44,14 @@ public class GUIManager : MonoBehaviour
 
     }
 
-
-    public void ShowDialogBox(Sprite portraitSprite, string dialogFraze)
+    /// <summary>
+    /// Main method to call when dialog box should be shown.
+    /// </summary>
+    public void ShowDialogBox(Sprite portraitSprite, string dialogFraze, float visibleTime)
     {
         dialogPortraitImage.sprite = portraitSprite;
         dialogText.text = dialogFraze;
+        dialogVisibilityTime = visibleTime;
         ShowDialogBox();
     }
 
@@ -47,6 +64,7 @@ public class GUIManager : MonoBehaviour
 
         dialogAnimationInProgress = true;
         dialogText.maxVisibleCharacters = 0;
+        isDialogOpen = true;
 
         StartCoroutine(ShowDialogAnimation());
     }
@@ -58,6 +76,8 @@ public class GUIManager : MonoBehaviour
             return;
 
         dialogAnimationInProgress = true;
+        isDialogOpen = false;
+
         StartCoroutine(HideDialogAnimation());
     }
 
@@ -77,13 +97,18 @@ public class GUIManager : MonoBehaviour
         int charCount = dialogText.textInfo.characterCount;
         int counter = 0;
 
-        while (counter < charCount)
+        while (counter < charCount && forceEndTextAnim == false)
         {
             counter++;
             dialogText.maxVisibleCharacters = counter;
             yield return new WaitForFixedUpdate();
         }
+        forceEndTextAnim = false;
+        dialogText.maxVisibleCharacters = charCount;
         dialogAnimationInProgress = false;
+
+        yield return new WaitForSeconds(dialogVisibilityTime);
+        HideDialogBox();
     }
 
     IEnumerator HideDialogAnimation()
@@ -98,5 +123,17 @@ public class GUIManager : MonoBehaviour
         }
         dialogCG.alpha = 0;
         dialogAnimationInProgress = false;
+    }
+
+
+
+
+
+    [Button]
+    private void DEV_testDialog()
+    {
+        ShowDialogBox(dialogPortraitImage.sprite,
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            2);
     }
 }
