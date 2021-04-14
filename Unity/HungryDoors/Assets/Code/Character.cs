@@ -14,7 +14,17 @@ public class Character : MonoBehaviour
     protected const string shootParam = "Shoot";
     protected const string pickupParam = "PickupItem";
     protected const string dieParam = "Die";
+    protected const string healParam = "Heal";
+    protected const string getDamageParam = "GetDamage";
 
+
+    public virtual void OnHealthUpdated(int healthChange)
+    {
+        if (healthChange > 0)
+            animator.SetTrigger(healParam);
+        else
+            animator.SetTrigger(getDamageParam);
+    }
 
     public virtual void Die()
     {

@@ -2,7 +2,7 @@
 {
     Food,
     Explosion,
-    Shoot,
+    Weapon,
 }
 
 public enum FoodType

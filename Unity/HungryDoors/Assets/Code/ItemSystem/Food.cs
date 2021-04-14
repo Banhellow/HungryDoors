@@ -6,7 +6,7 @@ public class Food : Item
 {
     private void Start()
     {
-
+        data.type = ItemType.Food;
     }
     public override void Use()
     {
