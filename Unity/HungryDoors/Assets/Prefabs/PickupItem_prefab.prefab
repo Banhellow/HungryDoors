@@ -4934,8 +4934,8 @@ GameObject:
   - component: {fileID: 4216895447387924863}
   - component: {fileID: 4216895447387924861}
   - component: {fileID: 4216895447387924857}
-  - component: {fileID: 4216895447387924862}
   - component: {fileID: 9077258298380621225}
+  - component: {fileID: 5644729718689252576}
   m_Layer: 8
   m_Name: PickupItem_prefab
   m_TagString: PickupItem
@@ -4986,26 +4986,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1091a96162d8bd84b839faa295bf3fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  type: 0
   foodType: 0
   weaponType: 0
   animationType: 0
   maxUsageCount: 1
---- !u!114 &4216895447387924862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4216895447387924834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f86e301716cbb446ba43662fb022e53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 4216895447387924857}
-  itemVFX: {fileID: 0}
-  pickupVisuals: {fileID: 556928946}
-  usageCount: 0
+  maxDurabilityHidden: 1
+  hiddenItemPrefab: {fileID: 0}
 --- !u!136 &9077258298380621225
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5020,6 +5008,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &5644729718689252576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4216895447387924834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b00034042430ea408432549caf7304f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 4216895447387924857}
+  itemVFX: {fileID: 0}
+  pickupVisuals: {fileID: 556928946}
+  durability: 0
 --- !u!1 &4216895447620696817
 GameObject:
   m_ObjectHideFlags: 0
@@ -5170,6 +5174,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9f8f080b4eeae6f48887f6a861cb359e,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickupItem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f8f080b4eeae6f48887f6a861cb359e, type: 3}

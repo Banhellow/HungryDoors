@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using NaughtyAttributes;
-[RequireComponent(typeof(ItemData))]
 public class Item: MonoBehaviour, IUsable
 {
     public ItemData data;
     public GameObject itemVFX;
     public GameObject pickupVisuals;
-    [ReadOnly] public int usageCount = 0;
+    [ReadOnly] public int durability = 0;
     private bool _isInUsage = false;
     public bool isInUsage { get => _isInUsage; set => _isInUsage = value; }
 
     private void Awake()
     {
-        data = GetComponent<ItemData>();
+       // data = GetComponent<ItemData>();
     }
 
     private void Start()
@@ -25,12 +24,27 @@ public class Item: MonoBehaviour, IUsable
 
     public virtual void Use()
     {
-        usageCount++;
-        if(usageCount >= data.maxUsageCount)
-        {
-            Destroy(gameObject);
-        }
+        ChangeItemDurability();
         Debug.Log("Object has used");
+    }
+
+    public virtual void ChangeItemDurability()
+    {
+        durability++;
+        if (durability >= data.maxUsageCount)
+        {
+            var Item = ShowRealItem();
+            Item.Use();
+            Destroy(gameObject);         
+        }
+    }
+
+    internal Item ShowRealItem()
+    {
+        var item = Instantiate(data.hiddenItemPrefab, transform.position, Quaternion.identity);
+        item.OnPickup(transform.parent);
+        item.data = data;
+        return item;
     }
 
     internal void OnPickup(Transform parentTR)

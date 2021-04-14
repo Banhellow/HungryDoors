@@ -13,7 +13,6 @@ public class DoorController : MonoBehaviour
     {
         conversation = new Conversation();
         string phrase = conversation.GetPhraseByFoodType(FoodType.wooden, false);
-        guiManager.ShowDialogBox(null, phrase, 2);
         Debug.Log(phrase);
     }
 
@@ -27,18 +26,22 @@ public class DoorController : MonoBehaviour
     {
         if(collision.tag == Tags.PICKUP_ITEM)
         {
-            var itemData = collision.GetComponentInParent<ItemData>();
+            var item = collision.GetComponentInParent<Item>();
             string phrase;
-            switch (itemData.type)
+            switch (item.data.type)
             {
                 case ItemType.Food:
-                    phrase = conversation.GetPhraseByFoodType(itemData.foodType,
-                        itemData.foodType == preferedFoodType ? true : false);
-                    Debug.Log(phrase);
+                    bool isCorrect = item.data.foodType == preferedFoodType ? true : false;
+                    phrase = conversation.GetPhraseByFoodType(item.data.foodType,
+                        isCorrect);
+                    guiManager.ShowDialogBox(null, phrase, 2f);
+                    if (isCorrect) OpenDoor();
+                    else SpawnEnemies();
                     break;
                 case ItemType.Weapon:
-                    phrase = conversation.GetPhraseByWeaponType(itemData.weaponType);
-                    Debug.Log(phrase);
+                    phrase = conversation.GetPhraseByWeaponType(item.data.weaponType);
+                    guiManager.ShowDialogBox(null, phrase, 2f);
+                    SpawnEnemies();
                     break;
             }
         }
@@ -46,7 +49,12 @@ public class DoorController : MonoBehaviour
 
     public void OpenDoor()
     {
+        gameObject.SetActive(false);
+    }
 
+    public void SpawnEnemies()
+    {
+        Debug.Log("Fail! Spawn more enemies");
     }
 }
 
