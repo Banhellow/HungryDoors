@@ -38,4 +38,12 @@ public class Conversation
         var correctPhrases = phrases.FindAll(x => x.type == type);
         return correctPhrases.RandomElement().phrase;
     }
+
+    public string GetCheatByHintAndLevel(int level, string hint)
+    {
+        var cheats = GetAllPhrases<CheatModel>("Conversations/Cheats");
+        var resaultCheat = cheats.Find(x => x.level == level && x.hint == hint);
+        string res = resaultCheat.cheatEN;
+        return res;
+    }
 }

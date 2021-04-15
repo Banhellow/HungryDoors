@@ -12,38 +12,36 @@ public class Item: MonoBehaviour, IUsable
     private bool _isInUsage = false;
     public bool isInUsage { get => _isInUsage; set => _isInUsage = value; }
 
-    private void Awake()
-    {
-       // data = GetComponent<ItemData>();
-    }
-
     private void Start()
     {
 
     }
 
-    public virtual void Use()
+    public virtual Item Use()
     {
-        ChangeItemDurability();
-        Debug.Log("Object has used");
+        Debug.Log("Object has bee used");
+        return ChangeItemDurability();
     }
 
-    public virtual void ChangeItemDurability()
+    public virtual Item ChangeItemDurability()
     {
         durability++;
         if (durability >= data.maxUsageCount)
         {
             var Item = ShowRealItem();
-            Item.Use();
-            Destroy(gameObject);         
+            Destroy(gameObject);
+            return Item;
         }
+        return this;
     }
 
     internal Item ShowRealItem()
     {
-        var item = Instantiate(data.hiddenItemPrefab, transform.position, Quaternion.identity);
+        if (data.relatedItem == null)
+            return null;
+        var item = Instantiate(data.relatedItem.selfItem, transform.position, Quaternion.identity);
         item.OnPickup(transform.parent);
-        item.data = data;
+        item.data = data.relatedItem;
         return item;
     }
 

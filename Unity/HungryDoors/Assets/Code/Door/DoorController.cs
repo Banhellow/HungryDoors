@@ -12,8 +12,8 @@ public class DoorController : MonoBehaviour
     void Start()
     {
         conversation = new Conversation();
-        string phrase = conversation.GetPhraseByFoodType(FoodType.wooden, false);
-        Debug.Log(phrase);
+        string cheat = conversation.GetCheatByHintAndLevel(1,"A");
+        Debug.Log(cheat);
     }
 
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2849396, g: 0.37139925, b: 0.49681926, a: 1}
+  m_IndirectSpecularColor: {r: 0.2849396, g: 0.3713986, b: 0.4968177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6591,6 +6591,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.74658024, y: 0.45555142, z: 0.7531364}
   m_Center: {x: 0.00040091574, y: 0.22777571, z: -0.003600955}
+--- !u!114 &516163615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516163611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f86e301716cbb446ba43662fb022e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    icon: {fileID: 0}
+    type: 0
+    foodType: 0
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: 516163615}
+  itemVFX: {fileID: 0}
+  pickupVisuals: {fileID: 0}
+  durability: 0
 --- !u!1 &518096972 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b26368623a95e484894366101d32f812,
@@ -13857,6 +13882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guiManager: {fileID: 1028368449}
+  _itemManager: {fileID: 0}
 --- !u!1001 &984800712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14490,6 +14516,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.74658024, y: 0.45555142, z: 0.7531364}
   m_Center: {x: 0.00040091574, y: 0.22777571, z: -0.003600955}
+--- !u!114 &1030724058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030724054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f86e301716cbb446ba43662fb022e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    icon: {fileID: 0}
+    type: 0
+    foodType: 0
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: 1030724058}
+  itemVFX: {fileID: 0}
+  pickupVisuals: {fileID: 0}
+  durability: 0
 --- !u!1 &1034160666
 GameObject:
   m_ObjectHideFlags: 0
@@ -16120,6 +16171,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: stool (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a287f439effe0fc44a2b39cbfaa4ae4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a287f439effe0fc44a2b39cbfaa4ae4a,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickupItem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287f439effe0fc44a2b39cbfaa4ae4a, type: 3}
@@ -21154,6 +21215,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: stool (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a287f439effe0fc44a2b39cbfaa4ae4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a287f439effe0fc44a2b39cbfaa4ae4a,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickupItem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287f439effe0fc44a2b39cbfaa4ae4a, type: 3}
 --- !u!4 &1432537595 stripped
@@ -21472,6 +21543,76 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1442796447}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1444635804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444635806}
+  - component: {fileID: 1444635805}
+  m_Layer: 0
+  m_Name: ---Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1444635805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444635804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b401bfc7a7d67d2489e89eea7ee4a259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 1030724058}
+  - {fileID: 1704888554}
+  - {fileID: 516163615}
+  - {fileID: 1753439415}
+  weaponPool: []
+  foodPool:
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 0
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 0
+    maxDurability: 0
+    selfItem: {fileID: 5644729718689252576, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 0
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 0
+    maxDurability: 0
+    selfItem: {fileID: 5644729718689252576, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+--- !u!4 &1444635806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444635804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1445225158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22014,6 +22155,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: stool
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a287f439effe0fc44a2b39cbfaa4ae4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a287f439effe0fc44a2b39cbfaa4ae4a,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickupItem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287f439effe0fc44a2b39cbfaa4ae4a, type: 3}
@@ -25087,6 +25238,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: stool (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a287f439effe0fc44a2b39cbfaa4ae4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a287f439effe0fc44a2b39cbfaa4ae4a,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickupItem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287f439effe0fc44a2b39cbfaa4ae4a, type: 3}
 --- !u!4 &1677732524 stripped
@@ -25913,6 +26074,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7465803, y: 0.45555142, z: 0.7531365}
   m_Center: {x: 0.0004009158, y: 0.22777571, z: -0.0036009555}
+--- !u!114 &1704888554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704888550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f86e301716cbb446ba43662fb022e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    icon: {fileID: 0}
+    type: 0
+    foodType: 0
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: 1704888554}
+  itemVFX: {fileID: 0}
+  pickupVisuals: {fileID: 0}
+  durability: 0
 --- !u!1001 &1705969164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26809,6 +26995,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.74658024, y: 0.45555142, z: 0.7531364}
   m_Center: {x: 0.00040091574, y: 0.22777571, z: -0.003600955}
+--- !u!114 &1753439415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753439411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f86e301716cbb446ba43662fb022e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    icon: {fileID: 0}
+    type: 0
+    foodType: 0
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: 1753439415}
+  itemVFX: {fileID: 0}
+  pickupVisuals: {fileID: 0}
+  durability: 0
 --- !u!1 &1754032481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a6d080609302bc540bd7e7b6a4b9a3ae,
@@ -31880,7 +32091,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4216895447387924857, guid: 2c6c8567c3e2aad41bed6f27e810f754, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c6c8567c3e2aad41bed6f27e810f754, type: 3}
 --- !u!1001 &7194897665747851316
 PrefabInstance:

@@ -12,10 +12,9 @@ public class Weapon : Item
         data.type = ItemType.Weapon;
     }
 
-    public override void Use()
+    public override Item Use()
     {
-        shootParticle.Play();
-        base.Use();
+        return this;
     }
 
 

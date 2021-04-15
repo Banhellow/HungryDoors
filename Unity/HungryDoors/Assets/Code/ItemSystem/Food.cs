@@ -9,17 +9,18 @@ public class Food : Item
     {
         data.type = ItemType.Food;
     }
-    public override void ChangeItemDurability()
+    public override Item ChangeItemDurability()
     {
-        if (durability >= data.maxDurabilityHidden)
+        if (durability >= data.maxDurability)
             Destroy(gameObject);
         else
             durability++;
+        return this;
     }
-    public override void Use()
+    public override Item Use()
     {
-        ChangeItemDurability();
         Debug.Log("Food is Used, food type: " + data.foodType);
+        return ChangeItemDurability();
         //base.Use();
     }
 }

@@ -4933,7 +4933,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4216895447387924863}
   - component: {fileID: 4216895447387924861}
-  - component: {fileID: 4216895447387924857}
   - component: {fileID: 9077258298380621225}
   - component: {fileID: 5644729718689252576}
   m_Layer: 8
@@ -4974,26 +4973,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4216895447387924857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4216895447387924834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1091a96162d8bd84b839faa295bf3fcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  type: 0
-  foodType: 0
-  weaponType: 0
-  animationType: 0
-  maxUsageCount: 1
-  maxDurabilityHidden: 1
-  hiddenItemPrefab: {fileID: 0}
 --- !u!136 &9077258298380621225
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5020,7 +4999,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b00034042430ea408432549caf7304f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 4216895447387924857}
+  data:
+    icon: {fileID: 0}
+    type: 0
+    foodType: 0
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: 0}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 556928946}
   durability: 0

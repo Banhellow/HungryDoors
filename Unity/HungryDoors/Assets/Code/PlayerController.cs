@@ -104,7 +104,7 @@ public class PlayerController : Character
                     animator.SetTrigger(shootParam);
                     break;
             }
-            currentItem.Use();
+            currentItem = currentItem.Use();
 
         }
 

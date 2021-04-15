@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IUsable
 {
-    void Use();
+    Item Use();
     bool isInUsage { get; set; }
 }
