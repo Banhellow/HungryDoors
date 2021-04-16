@@ -3,34 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using NaughtyAttributes;
-[RequireComponent(typeof(ItemData))]
 public class Item: MonoBehaviour, IUsable
 {
     public ItemData data;
     public GameObject itemVFX;
     public GameObject pickupVisuals;
-    [ReadOnly] public int usageCount = 0;
+    [ReadOnly] public int durability = 0;
     private bool _isInUsage = false;
     public bool isInUsage { get => _isInUsage; set => _isInUsage = value; }
-
-    private void Awake()
-    {
-        data = GetComponent<ItemData>();
-    }
 
     private void Start()
     {
 
     }
 
-    public virtual void Use()
+    public virtual Item Use()
     {
-        usageCount++;
-        if(usageCount >= data.maxUsageCount)
+        Debug.Log("Object has bee used");
+        return ChangeItemDurability();
+    }
+
+    public virtual Item ChangeItemDurability()
+    {
+        durability++;
+        if (durability >= data.maxUsageCount)
         {
+            var Item = ShowRealItem();
             Destroy(gameObject);
+            return Item;
         }
-        Debug.Log("Object has used");
+        return this;
+    }
+
+    internal Item ShowRealItem()
+    {
+        if (data.relatedItem == null)
+            return null;
+        var item = Instantiate(data.relatedItem.selfItem, transform.position, Quaternion.identity);
+        item.OnPickup(transform.parent);
+        item.data = data.relatedItem;
+        return item;
     }
 
     internal void OnPickup(Transform parentTR)

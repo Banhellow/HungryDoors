@@ -6,9 +6,11 @@ using Zenject;
 public class GameInstaller : MonoInstaller
 {
     public GUIManager _guiManager;
+    public ItemManager _itemManager;
 
     public override void InstallBindings()
     {
         Container.Bind<GUIManager>().FromInstance(_guiManager).AsSingle();
+        Container.Bind<ItemManager>().FromInstance(_itemManager).AsSingle();
     }
 }
