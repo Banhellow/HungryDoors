@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
+using NaughtyAttributes;
 
 public class DoorController : MonoBehaviour
 {
     [Inject]
     private GUIManager guiManager;
+    [ShowAssetPreview(64,64)]
+    public Sprite doorImage;
     public FoodType preferedFoodType;
     public Conversation conversation;
     void Start()
@@ -34,13 +37,13 @@ public class DoorController : MonoBehaviour
                     bool isCorrect = item.data.foodType == preferedFoodType ? true : false;
                     phrase = conversation.GetPhraseByFoodType(item.data.foodType,
                         isCorrect);
-                    guiManager.ShowDialogBox(null, phrase, 2f);
+                    guiManager.ShowDialogBox(doorImage, phrase, 2f);
                     if (isCorrect) OpenDoor();
                     else SpawnEnemies();
                     break;
                 case ItemType.Weapon:
                     phrase = conversation.GetPhraseByWeaponType(item.data.weaponType);
-                    guiManager.ShowDialogBox(null, phrase, 2f);
+                    guiManager.ShowDialogBox(doorImage, phrase, 2f);
                     SpawnEnemies();
                     break;
             }
