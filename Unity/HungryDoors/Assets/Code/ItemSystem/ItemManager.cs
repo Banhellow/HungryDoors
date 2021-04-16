@@ -15,6 +15,7 @@ public class ItemManager : MonoBehaviour
         indices = GenerateIndiciesArray(items.Count);
         BindPool(weaponPool);
         BindPool(foodPool);
+        BindPool(propsPool);
     }
 
     void Update()
@@ -27,11 +28,10 @@ public class ItemManager : MonoBehaviour
         while(poolIndices.Count > 0)
         {
             int index = indices.RandomElement();
-
+            int poolIndex = poolIndices.RandomElement();
             var item = items[index];
-            item.data.relatedItem = pool[0];
-
-            poolIndices.RemoveAt(0);
+            item.data.relatedItem = pool[poolIndex];
+            poolIndices.Remove(poolIndex);
             indices.Remove(index);
         }
     }

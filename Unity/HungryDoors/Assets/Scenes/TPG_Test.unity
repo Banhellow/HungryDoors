@@ -4733,6 +4733,31 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1195392793}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &366625485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366625484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f86e301716cbb446ba43662fb022e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    icon: {fileID: 0}
+    type: 0
+    foodType: 0
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: 366625485}
+  itemVFX: {fileID: 0}
+  pickupVisuals: {fileID: 0}
+  durability: 0
 --- !u!65 &366625488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17225,6 +17250,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: artifact
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 26f82079ae5364143a4e6e8116f4be11,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 26f82079ae5364143a4e6e8116f4be11,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickupItem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26f82079ae5364143a4e6e8116f4be11, type: 3}
 --- !u!1001 &1196616793
@@ -21598,6 +21633,67 @@ MonoBehaviour:
     maxUsageCount: 0
     maxDurability: 0
     selfItem: {fileID: 5644729718689252576, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+  propsPool:
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 2
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: 5046333098017190465, guid: 4331ef3dd977af14ca5ced82fe59c1d6,
+      type: 3}
+  - icon: {fileID: 0}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: 1276111137296086213, guid: b61f0456c8eeb5948bdb748cca55cfef,
+      type: 3}
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 1
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: -8479915785062098134, guid: 836d8b1a4fa2a004d96860b4e58a58c3,
+      type: 3}
+  - icon: {fileID: 0}
+    type: 2
+    foodType: 0
+    weaponType: 1
+    animationType: 0
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: 974243702538862656, guid: d1bde6e2a1ad97b47baddfd322827f19,
+      type: 3}
+  - icon: {fileID: 0}
+    type: 2
+    foodType: 0
+    weaponType: 1
+    animationType: 1
+    damage: 0
+    maxUsageCount: 1
+    maxDurability: 1
+    selfItem: {fileID: 2589516739636836551, guid: f898c007cbaec774ea2a008ff1111459,
+      type: 3}
+  - icon: {fileID: 0}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    animationType: 0
+    damage: 0
+    maxUsageCount: 0
+    maxDurability: 0
+    selfItem: {fileID: 8134519426570011309, guid: c19c4c99bfdcf1241b214a93e00e2f6c,
       type: 3}
 --- !u!4 &1444635806
 Transform:
