@@ -29,9 +29,11 @@ public class Item: MonoBehaviour, IUsable
     public virtual Item ChangeItemDurability()
     {
         durability++;
+        gUIManager.UpdateItemDurability(this);
         if (durability >= data.maxUsageCount)
         {
             var Item = ShowRealItem();
+            gUIManager.ItemLost();
             Destroy(gameObject);
             return Item;
         }

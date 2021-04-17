@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,6 +14,8 @@ public class GUIManager : MonoBehaviour
 
     [Header("Player item")]
     public Image playerItemIconImage;
+    public Sprite emptySlotSprite;
+    public TMP_Text itemUsageLeftText;
 
     [Header("Dialog")]
     public CanvasGroup dialogCG;
@@ -40,9 +43,22 @@ public class GUIManager : MonoBehaviour
         lifeFillImage.DOFillAmount(lifePercentage, 0.2f);
     }
 
+
     public void UpdatePlayerItem(Item item)
     {
         playerItemIconImage.sprite = item.data.icon;
+        UpdateItemDurability(item);
+    }
+
+    internal void UpdateItemDurability(Item item)
+    {
+        itemUsageLeftText.text = (item.data.maxUsageCount - item.durability).ToString();
+    }
+
+    internal void ItemLost()
+    {
+        playerItemIconImage.sprite = emptySlotSprite;
+        itemUsageLeftText.text = "";
     }
 
     /// <summary>
