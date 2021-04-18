@@ -110,13 +110,15 @@ MonoBehaviour:
     type: 2
     foodType: 0
     weaponType: 0
+    usageType: 0
     animationType: 0
     damage: 15
-    maxUsageCount: 1
-    maxDurability: 1
+    maxDurability: 2
+    pushForce: 1000
     selfItem: {fileID: 1023513743204124255}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  itemRB: {fileID: 2889804246496291285}
   durability: 0
 --- !u!54 &2889804246496291285
 Rigidbody:

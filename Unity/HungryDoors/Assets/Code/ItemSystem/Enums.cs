@@ -25,3 +25,9 @@ public enum AnimationType
     attack,
     shoot,
 }
+
+public enum UsageType
+{
+    InHands,
+    Throw
+}

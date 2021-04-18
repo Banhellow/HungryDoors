@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2849406, g: 0.3713998, b: 0.49681896, a: 1}
+  m_IndirectSpecularColor: {r: 0.2849396, g: 0.3713986, b: 0.4968177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4556,11 +4556,12 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 319546456}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  _itemRB: {fileID: 0}
   durability: 0
 --- !u!1001 &322316891
 PrefabInstance:
@@ -5221,11 +5222,12 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 366625485}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  _itemRB: {fileID: 0}
   durability: 0
 --- !u!65 &366625488
 BoxCollider:
@@ -7254,11 +7256,12 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 516163615}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  _itemRB: {fileID: 0}
   durability: 0
 --- !u!1 &518096972 stripped
 GameObject:
@@ -7298,12 +7301,29 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
-    maxDurability: 1
+    maxDurability: 2
+    pushForce: 2000
     selfItem: {fileID: 518096976}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  _itemRB: {fileID: 0}
   durability: 0
+--- !u!54 &518096977
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518096972}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &522197391 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a6d080609302bc540bd7e7b6a4b9a3ae,
@@ -15460,11 +15480,12 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 1030724058}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  _itemRB: {fileID: 0}
   durability: 0
 --- !u!1 &1037409142 stripped
 GameObject:
@@ -19735,11 +19756,12 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 1299053247}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  _itemRB: {fileID: 0}
   durability: 0
 --- !u!1 &1299890787 stripped
 GameObject:
@@ -22867,8 +22889,8 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 0
     maxDurability: 0
+    pushForce: 1000
     selfItem: {fileID: 5644729718689252576, guid: 2c6c8567c3e2aad41bed6f27e810f754,
       type: 3}
   - icon: {fileID: 8545975522788285384, guid: 3ef72418ac221de48b71f9651931b291, type: 3}
@@ -22877,8 +22899,8 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 0
     maxDurability: 0
+    pushForce: 1000
     selfItem: {fileID: 5644729718689252576, guid: 2c6c8567c3e2aad41bed6f27e810f754,
       type: 3}
   propsPool:
@@ -22888,8 +22910,8 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 5046333098017190465, guid: 4331ef3dd977af14ca5ced82fe59c1d6,
       type: 3}
   - icon: {fileID: 0}
@@ -22898,8 +22920,8 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 1276111137296086213, guid: b61f0456c8eeb5948bdb748cca55cfef,
       type: 3}
   - icon: {fileID: 0}
@@ -22908,8 +22930,8 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: -8479915785062098134, guid: 836d8b1a4fa2a004d96860b4e58a58c3,
       type: 3}
   - icon: {fileID: 0}
@@ -22918,8 +22940,8 @@ MonoBehaviour:
     weaponType: 1
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 974243702538862656, guid: d1bde6e2a1ad97b47baddfd322827f19,
       type: 3}
   - icon: {fileID: 0}
@@ -22928,8 +22950,8 @@ MonoBehaviour:
     weaponType: 1
     animationType: 1
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 2589516739636836551, guid: f898c007cbaec774ea2a008ff1111459,
       type: 3}
   - icon: {fileID: 0}
@@ -22938,10 +22960,11 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 0
     maxDurability: 0
+    pushForce: 1000
     selfItem: {fileID: 8134519426570011309, guid: c19c4c99bfdcf1241b214a93e00e2f6c,
       type: 3}
+  specialItems: []
 --- !u!4 &1444635806
 Transform:
   m_ObjectHideFlags: 0
@@ -23813,11 +23836,12 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 1494571934}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  _itemRB: {fileID: 0}
   durability: 0
 --- !u!1001 &1495971803
 PrefabInstance:
@@ -27871,11 +27895,12 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 1704888554}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  _itemRB: {fileID: 0}
   durability: 0
 --- !u!1001 &1705969164
 PrefabInstance:
@@ -28877,11 +28902,12 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 1753439415}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  _itemRB: {fileID: 0}
   durability: 0
 --- !u!1 &1754032481 stripped
 GameObject:

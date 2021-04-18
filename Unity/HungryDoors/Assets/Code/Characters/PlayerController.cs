@@ -10,7 +10,7 @@ using Zenject.SpaceFighter;
 public class PlayerController : Character
 {
     [Inject]
-    public  GUIManager guiManager;
+    public GUIManager guiManager;
     private LifeController myLifeController;
 
     [Header("Character controller")]
@@ -32,6 +32,11 @@ public class PlayerController : Character
     private Camera mainCamera;
     private Plane groundPlane;
     private Vector3 lookAtPosition;
+
+    public Vector3 LookDirection { get => (lookAtPosition - transform.position).normalized;  }
+
+
+
 
     //[Inject]
     //private void Construct(GUIManager _guiManager)

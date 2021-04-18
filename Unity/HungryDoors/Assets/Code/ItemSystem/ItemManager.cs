@@ -1,25 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using NaughtyAttributes;
 public class ItemManager : MonoBehaviour
 {
+    [Header("Elements that spawn randomly")]
     public List<Item> items;
     public List<ItemData> weaponPool;
     public List<ItemData> foodPool;
     public List<ItemData> propsPool;
     private List<int> indices;
 
+    [Header("Elements that have special Conditions")]
+    public Item specialItem;
+    public float spawnChance;
+
+    [Header("Enemies with items")]
+    public List<Item> activeEnemyItems;
     void Start()
     {
+        activeEnemyItems = new List<Item>();
         indices = GenerateIndiciesArray(items.Count);
         BindPool(weaponPool);
         BindPool(foodPool);
         BindPool(propsPool);
-    }
-
-    void Update()
-    {
     }
 
     public void BindPool(List<ItemData> pool)
@@ -36,14 +40,14 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    List<ItemData> ExtractDataFromItems(List<Item> array)
+    public Item GetQuestItemWithProbability()
     {
-        var data = new List<ItemData>();
-        for(int i = 0; i < array.Count;i++)
+        if (activeEnemyItems.Contains(specialItem))
+            return null;
+        else
         {
-            data.Add(array[i].data);
+            return Random.Range(0f, 1f) < spawnChance ? specialItem : null;
         }
-        return data;
     }
 
     private List<int> GenerateIndiciesArray(int range)
@@ -54,5 +58,28 @@ public class ItemManager : MonoBehaviour
             array.Add(i);
         }
         return array;
+    }
+
+    [Button]
+    public void AddRigidBodyToItems()
+    {
+        int newRbCounter = 0;
+        int unbindCounter = 0;
+        for(int i = 0; i < items.Count; i++)
+        {
+            if (items[i].gameObject.GetComponent<Rigidbody>() == null)
+            {
+                newRbCounter++;
+                items[i].gameObject.AddComponent<Rigidbody>().isKinematic = true;
+            }
+            else
+            {
+                items[i].itemRB = items[i].GetComponent<Rigidbody>();
+                unbindCounter++;
+            }
+
+        }
+        Debug.Log("RigidBodies added: " + newRbCounter);
+        Debug.Log("RigidBodies binded: " + unbindCounter);
     }
 }

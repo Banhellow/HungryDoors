@@ -52,7 +52,7 @@ public class GUIManager : MonoBehaviour
 
     internal void UpdateItemDurability(Item item)
     {
-        itemUsageLeftText.text = (item.data.maxUsageCount - item.durability).ToString();
+        itemUsageLeftText.text = (item.data.maxDurability - item.durability).ToString();
     }
 
     internal void ItemLost()

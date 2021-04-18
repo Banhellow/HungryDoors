@@ -19,7 +19,7 @@ public class Food : Item
     }
     public override Item Use()
     {
-        Debug.Log("Food is Used, food type: " + data.foodType);
+        ThrowItem(data.pushForce);
         return ChangeItemDurability();
         //base.Use();
     }

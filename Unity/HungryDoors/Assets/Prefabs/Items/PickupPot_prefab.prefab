@@ -98,13 +98,15 @@ MonoBehaviour:
     type: 0
     foodType: 2
     weaponType: 0
+    usageType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
-    maxDurability: 1
+    maxDurability: 5
+    pushForce: 1000
     selfItem: {fileID: 5046333098017190465}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  itemRB: {fileID: 4814211292493734540}
   durability: 0
 --- !u!136 &8318256884554840432
 CapsuleCollider:

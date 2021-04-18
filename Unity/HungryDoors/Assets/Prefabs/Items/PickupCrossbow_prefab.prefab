@@ -51,13 +51,15 @@ MonoBehaviour:
     type: 2
     foodType: 0
     weaponType: 1
+    usageType: 0
     animationType: 1
     damage: 0
-    maxUsageCount: 1
-    maxDurability: 1
+    maxDurability: 5
+    pushForce: 1000
     selfItem: {fileID: 4059406043170351024}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
+  itemRB: {fileID: 621364154442004567}
   durability: 0
   shootParticle: {fileID: 0}
 --- !u!136 &-6275813386460146691

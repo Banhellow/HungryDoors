@@ -5006,11 +5006,12 @@ MonoBehaviour:
     weaponType: 0
     animationType: 0
     damage: 0
-    maxUsageCount: 1
     maxDurability: 1
+    pushForce: 1000
     selfItem: {fileID: 0}
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 556928946}
+  itemRB: {fileID: 4216895447387924861}
   durability: 0
 --- !u!1 &4216895447620696817
 GameObject:

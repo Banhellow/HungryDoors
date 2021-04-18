@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 [System.Serializable]
 public class ItemData
 {
@@ -13,14 +12,15 @@ public class ItemData
     public ItemType type;
     public FoodType foodType;
     public WeaponType weaponType;
+    public UsageType usageType;
 
     [Header("Animations")]
     public AnimationType animationType;
 
     [Header("Item settings")]
     public int damage; 
-    public int maxUsageCount = 1;
     public int maxDurability = 1;
+    public float pushForce = 1000f;
     public Item selfItem;
     public ItemData relatedItem;
 }
