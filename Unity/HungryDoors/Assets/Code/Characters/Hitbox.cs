@@ -6,6 +6,9 @@ public class Hitbox : MonoBehaviour
 {
     private LifeController lifeController;
 
+    private float damageMinDelay = 0.5f;
+    private float lastDamageTime = 0;
+
     private void Awake()
     {
         lifeController = GetComponentInParent<LifeController>();
@@ -20,6 +23,10 @@ public class Hitbox : MonoBehaviour
         if (dc.isPlayersWeapon == lifeController.myCharacter.isPlayer)
             return;
 
-        lifeController.GetDamage(dc.damage);
+        if (Time.realtimeSinceStartup >= lastDamageTime + damageMinDelay)
+        {
+            lastDamageTime = Time.realtimeSinceStartup;
+            lifeController.GetDamage(dc.damage);
+        }
     }
 }
