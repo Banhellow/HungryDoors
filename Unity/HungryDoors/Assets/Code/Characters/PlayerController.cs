@@ -33,11 +33,6 @@ public class PlayerController : Character
     private Plane groundPlane;
     private Vector3 lookAtPosition;
 
-    //[Inject]
-    //private void Construct(GUIManager _guiManager)
-    //{
-    //    guiManager = _guiManager;
-    //}
 
     private void Awake()
     {
@@ -50,6 +45,9 @@ public class PlayerController : Character
 
     void Update()
     {
+        if (isDead) 
+            return;
+
         ReadInput();
         HandleInput();
         HandleAnimator();
@@ -120,6 +118,7 @@ public class PlayerController : Character
                 Item item = allColliders[i].GetComponent<Item>();
                 if (item != null)
                 {
+                    rightArmHandleTR.BB_DestroyAllChildren();
                     currentItem = item;
                     item.OnPickup(rightArmHandleTR);
                     guiManager.UpdatePlayerItem(item);

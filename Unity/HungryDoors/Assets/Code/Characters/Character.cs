@@ -6,6 +6,7 @@ using Zenject.SpaceFighter;
 public class Character : MonoBehaviour
 {
     public bool isPlayer = false;
+    public bool isDead = false;
 
     [Header("Animations")]
     public Animator animator;
@@ -28,7 +29,11 @@ public class Character : MonoBehaviour
 
     public virtual void Die()
     {
+        if (isDead)
+            return;
+
         Debug.Log("Character Die");
+        isDead = true;
         animator.SetTrigger(isDeadParam);
     }
 
