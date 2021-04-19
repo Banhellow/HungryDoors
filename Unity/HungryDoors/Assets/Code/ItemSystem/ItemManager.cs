@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using Zenject;
 public class ItemManager : MonoBehaviour
 {
+    //Injections
+    private ItemFactory _itemFactory;
+
+
     [Header("Elements that spawn randomly")]
     public List<Item> items;
     public List<ItemData> weaponPool;
@@ -17,6 +22,14 @@ public class ItemManager : MonoBehaviour
 
     [Header("Enemies with items")]
     public List<Item> activeEnemyItems;
+
+    [Inject]
+    public void Init(ItemFactory factory)
+    {
+        _itemFactory = factory;
+        Debug.Log("Factory injected");
+    }
+
     void Start()
     {
         activeEnemyItems = new List<Item>();
@@ -24,6 +37,12 @@ public class ItemManager : MonoBehaviour
         BindPool(weaponPool);
         BindPool(foodPool);
         BindPool(propsPool);
+    }
+
+    public Item InstantiateItem(Item item, Vector3 pos, Quaternion rot, Transform parent = null)
+    {
+        var newItem = _itemFactory.Create(item, pos, rot, parent);
+        return newItem;
     }
 
     public void BindPool(List<ItemData> pool)

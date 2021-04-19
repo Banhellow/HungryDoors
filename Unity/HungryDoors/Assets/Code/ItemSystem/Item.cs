@@ -12,21 +12,29 @@ public class Item: MonoBehaviour, IUsable
     public Rigidbody itemRB;
     [ReadOnly] public int durability = 0;
 
-    [Inject]
     private GUIManager GUIManager;
+    private ItemManager itemManager;
     private bool _isInUsage = false;
+    private bool _hasLanded = true;
     public bool isInUsage { get => _isInUsage; set => _isInUsage = value; }
 
-
+    [Inject]
+    public void Init(GUIManager gui, ItemManager itemMan)
+    {
+        GUIManager = gui;
+        itemManager = itemMan;
+    }
     private void Start()
     {
     }
 
     public virtual void OnCollisionEnter(Collision collision)
     {
+
         if(!collision.gameObject.CompareTag(Tags.PLAYER) &&
-            !collision.gameObject.CompareTag(Tags.UNTAGGED))
+            !collision.gameObject.CompareTag(Tags.FLOOR) && !_hasLanded)
         {
+            _hasLanded = true;
            Debug.Log("Collision detected: " + collision.gameObject);
            ChangeItemDurability();
         }    
@@ -45,10 +53,10 @@ public class Item: MonoBehaviour, IUsable
 
     }
 
-
     public virtual Item ThrowItem(float force)
     {
         itemRB.isKinematic = false;
+        _hasLanded = false;
         Vector3 lookAtDir = GetComponentInParent<PlayerController>().LookDirection;
         transform.SetParent(null);
         itemRB.AddForce(lookAtDir * force);
@@ -78,7 +86,7 @@ public class Item: MonoBehaviour, IUsable
     {
         if (data.relatedItem == null)
             return null;
-        var item = Instantiate(data.relatedItem.selfItem, transform.position, Quaternion.identity);
+        var item = itemManager.InstantiateItem(data.relatedItem.selfItem, transform.position, Quaternion.identity);
         item.data = data.relatedItem;
         if (this.isInUsage)
         {

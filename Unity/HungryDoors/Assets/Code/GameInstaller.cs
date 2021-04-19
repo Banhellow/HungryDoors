@@ -12,5 +12,6 @@ public class GameInstaller : MonoInstaller
     {
         Container.Bind<GUIManager>().FromInstance(_guiManager).AsSingle();
         Container.Bind<ItemManager>().FromInstance(_itemManager).AsSingle();
+        Container.BindFactory<Item, Vector3, Quaternion, Transform, Item, ItemFactory>();
     }
 }

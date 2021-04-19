@@ -9,4 +9,6 @@ public class Tags
 	public const string PLAYER = "Player";
 	public const string GAME_CONTROLLER = "GameController";
 	public const string PICKUP_ITEM = "PickupItem";
+	public const string ENEMY = "Enemy";
+	public const string FLOOR = "Floor";
 }
