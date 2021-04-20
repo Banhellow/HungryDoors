@@ -14,15 +14,17 @@ public class Item: MonoBehaviour, IUsable
 
     private GUIManager GUIManager;
     private ItemManager itemManager;
+    private SoundManager soundManager;
     private bool _isInUsage = false;
     private bool _hasLanded = true;
     public bool isInUsage { get => _isInUsage; set => _isInUsage = value; }
 
     [Inject]
-    public void Init(GUIManager gui, ItemManager itemMan)
+    public void Init(GUIManager gui, ItemManager itemMan, SoundManager sound)
     {
         GUIManager = gui;
         itemManager = itemMan;
+        soundManager = sound;
     }
     private void Start()
     {
@@ -55,6 +57,7 @@ public class Item: MonoBehaviour, IUsable
 
     public virtual Item ThrowItem(float force)
     {
+        soundManager.PlaySfx(SFX.Throw);
         itemRB.isKinematic = false;
         _hasLanded = false;
         Vector3 lookAtDir = GetComponentInParent<PlayerController>().LookDirection;
@@ -68,6 +71,8 @@ public class Item: MonoBehaviour, IUsable
         durability++;
         if(isInUsage)
             GUIManager.UpdateItemDurability(this);
+
+        soundManager.PlaySfx(data.sfx);
 
         if (durability >= data.maxDurability)
         {
@@ -99,17 +104,14 @@ public class Item: MonoBehaviour, IUsable
             item.transform.position = transform.position;
             return null;
         }
-
-
-
     }
 
     internal void OnPickup(Transform parentTR)
     {
         Debug.Log($"OnPickup {this.name}");
+        soundManager.PlaySfx(SFX.ItemPickup);
         itemRB.isKinematic = true;
         transform.SetParent(parentTR);
-
         transform.localPosition = Vector3.zero;
         transform.localScale = Vector3.one;
         transform.localRotation = Quaternion.identity;
