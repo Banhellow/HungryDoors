@@ -16,6 +16,8 @@ public class ItemData
 
     [Header("Animations")]
     public AnimationType animationType;
+    [Header("SFX")]
+    public SFX sfx;
 
     [Header("Item settings")]
     public int damage; 

@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using NaughtyAttributes;
 using Zenject;
-public class Item: MonoBehaviour, IUsable
+public class Item : MonoBehaviour, IUsable
 {
     public ItemData data;
     public GameObject itemVFX;
@@ -14,15 +14,17 @@ public class Item: MonoBehaviour, IUsable
 
     private GUIManager GUIManager;
     private ItemManager itemManager;
+    private SoundManager soundManager;
     private bool _isInUsage = false;
     private bool _hasLanded = true;
     public bool isInUsage { get => _isInUsage; set => _isInUsage = value; }
 
     [Inject]
-    public void Init(GUIManager gui, ItemManager itemMan)
+    public void Init(GUIManager gui, ItemManager itemMan, SoundManager sound)
     {
         GUIManager = gui;
         itemManager = itemMan;
+        soundManager = sound;
     }
     private void Start()
     {
@@ -31,13 +33,13 @@ public class Item: MonoBehaviour, IUsable
     public virtual void OnCollisionEnter(Collision collision)
     {
 
-        if(!collision.gameObject.CompareTag(Tags.PLAYER) &&
+        if (!collision.gameObject.CompareTag(Tags.PLAYER) &&
             !collision.gameObject.CompareTag(Tags.FLOOR) && !_hasLanded)
         {
             _hasLanded = true;
-           Debug.Log("Collision detected: " + collision.gameObject);
-           ChangeItemDurability();
-        }    
+            Debug.Log("Collision detected: " + collision.gameObject);
+            ChangeItemDurability();
+        }
     }
 
     public virtual Item Use()
@@ -55,6 +57,7 @@ public class Item: MonoBehaviour, IUsable
 
     public virtual Item ThrowItem(float force)
     {
+        soundManager.PlaySfx(SFX.Throw);
         itemRB.isKinematic = false;
         _hasLanded = false;
         Vector3 lookAtDir = GetComponentInParent<PlayerController>().LookDirection;
@@ -66,16 +69,19 @@ public class Item: MonoBehaviour, IUsable
     public virtual Item ChangeItemDurability()
     {
         durability++;
-        if(isInUsage)
+        if (isInUsage)
             GUIManager.UpdateItemDurability(this);
+
+        soundManager.PlaySfx(data.sfx);
 
         if (durability >= data.maxDurability)
         {
             var Item = ShowRealItem();
 
-            if(isInUsage)
+            if (isInUsage)
                 GUIManager.ItemLost();
 
+            soundManager.PlaySfxWithDelay(SFX.ItemBreaks, 0.7f);
             Destroy(gameObject);
             return Item;
         }
@@ -100,17 +106,14 @@ public class Item: MonoBehaviour, IUsable
             item.GetComponent<Rigidbody>().isKinematic = false;
             return null;
         }
-
-
-
     }
 
     internal void OnPickup(Transform parentTR)
     {
         Debug.Log($"OnPickup {this.name}");
+        soundManager.PlaySfx(SFX.ItemPickup);
         itemRB.isKinematic = true;
         transform.SetParent(parentTR);
-
         transform.localPosition = Vector3.zero;
         transform.localScale = Vector3.one;
         transform.localRotation = Quaternion.identity;
