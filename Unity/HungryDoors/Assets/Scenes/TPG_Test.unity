@@ -4600,7 +4600,7 @@ MonoBehaviour:
     type: 0
     foodType: 0
     weaponType: 0
-    usageType: 0
+    usageType: 1
     animationType: 0
     damage: 0
     maxDurability: 1
@@ -7380,7 +7380,7 @@ MonoBehaviour:
     type: 0
     foodType: 0
     weaponType: 0
-    usageType: 0
+    usageType: 1
     animationType: 0
     damage: 0
     maxDurability: 2
