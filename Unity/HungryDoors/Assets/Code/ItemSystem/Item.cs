@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using NaughtyAttributes;
 using Zenject;
-public class Item: MonoBehaviour, IUsable
+public class Item : MonoBehaviour, IUsable
 {
     public ItemData data;
     public GameObject itemVFX;
@@ -33,13 +33,13 @@ public class Item: MonoBehaviour, IUsable
     public virtual void OnCollisionEnter(Collision collision)
     {
 
-        if(!collision.gameObject.CompareTag(Tags.PLAYER) &&
+        if (!collision.gameObject.CompareTag(Tags.PLAYER) &&
             !collision.gameObject.CompareTag(Tags.FLOOR) && !_hasLanded)
         {
             _hasLanded = true;
-           Debug.Log("Collision detected: " + collision.gameObject);
-           ChangeItemDurability();
-        }    
+            Debug.Log("Collision detected: " + collision.gameObject);
+            ChangeItemDurability();
+        }
     }
 
     public virtual Item Use()
@@ -69,7 +69,7 @@ public class Item: MonoBehaviour, IUsable
     public virtual Item ChangeItemDurability()
     {
         durability++;
-        if(isInUsage)
+        if (isInUsage)
             GUIManager.UpdateItemDurability(this);
 
         soundManager.PlaySfx(data.sfx);
@@ -78,9 +78,10 @@ public class Item: MonoBehaviour, IUsable
         {
             var Item = ShowRealItem();
 
-            if(isInUsage)
+            if (isInUsage)
                 GUIManager.ItemLost();
 
+            soundManager.PlaySfxWithDelay(SFX.ItemBreaks, 0.7f);
             Destroy(gameObject);
             return Item;
         }

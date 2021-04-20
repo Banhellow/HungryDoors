@@ -126,6 +126,7 @@ public class PlayerController : Character
                     rightArmHandleTR.BB_DestroyAllChildren();
                     currentItem = item;
                     item.OnPickup(rightArmHandleTR);
+                     item.gameObject.GetComponent<DamageCollider>().OnPickupByPlayer();
                     guiManager.UpdatePlayerItem(item);
                     return;
                 }

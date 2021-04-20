@@ -328,3 +328,12 @@ MonoBehaviour:
   - sfx: 7
     clips:
     - {fileID: 8300000, guid: 027912b25e49b2f42a40467662d4b8cf, type: 3}
+  - sfx: 8
+    clips:
+    - {fileID: 8300000, guid: 8a8b73fc805b5df419c8c16019e3a6bc, type: 3}
+  - sfx: 9
+    clips:
+    - {fileID: 8300000, guid: d092ad259ff5aeb469fa0feefbb26f55, type: 3}
+  - sfx: 10
+    clips:
+    - {fileID: 8300000, guid: 09bda3250b28fda41a20ea763670678f, type: 3}

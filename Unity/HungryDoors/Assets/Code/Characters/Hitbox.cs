@@ -18,9 +18,16 @@ public class Hitbox : MonoBehaviour
     {
         Debug.Log($"Hitbox OnTriggerEnter : {other}");
         DamageCollider dc = other.gameObject.GetComponent<DamageCollider>();
-        
+
+        if (dc == null)
+            return;
+
+        // check if is in use
+        if (dc.isInUse == false)
+            return;
+
         // dont hit yoursefl
-        if (dc.isPlayersWeapon == lifeController.myCharacter.isPlayer)
+        if (dc.isPlayersItem == lifeController.myCharacter.isPlayer)
             return;
 
         if (Time.realtimeSinceStartup >= lastDamageTime + damageMinDelay)

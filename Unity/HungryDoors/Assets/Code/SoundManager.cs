@@ -1,9 +1,10 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SFX { SwordAttack, AxeAttack, Damage, Throw, Eating, ItemDrop, Death, ItemPickup }
+public enum SFX { SwordAttack, AxeAttack, Damage, Throw, Eating, ItemDrop, Death, ItemPickup, CrossbowAtack, ItemHit, ItemBreaks }
 
 [Serializable]
 public struct SfxData
@@ -67,6 +68,13 @@ public class SoundManager : MonoBehaviour
             sfxAS.PlayOneShot(sfx);
     }
 
+    public void PlaySfxWithDelay(SFX s, float delay)
+    {
+        var sfx = GetSFX(s);
+        if (sfxIsOn && sfx != null)
+            DOVirtual.DelayedCall(delay, () => sfxAS.PlayOneShot(sfx));
+    }
+
     private AudioClip GetSFX(SFX s)
     {
         for (int i = 0; i < sfxClipList.Count; i++)
@@ -79,7 +87,7 @@ public class SoundManager : MonoBehaviour
                 }
                 else
                 {
-                    return sfxClipList[i].clips[UnityEngine.Random.Range(0, sfxClipList[i].clips.Length-1)];
+                    return sfxClipList[i].clips[UnityEngine.Random.Range(0, sfxClipList[i].clips.Length - 1)];
                 }
             }
         }
