@@ -36,7 +36,7 @@ public class ItemManager : MonoBehaviour
         indices = GenerateIndiciesArray(items.Count);
         BindPool(weaponPool);
         BindPool(foodPool);
-        BindPool(propsPool);
+        BindPoolWithRandomProps();
     }
 
     public Item InstantiateItem(Item item, Vector3 pos, Quaternion rot, Transform parent = null)
@@ -59,14 +59,29 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    public Item GetQuestItemWithProbability()
+    public void BindPoolWithRandomProps()
+    {
+        for(int i = 0; i < indices.Count; i++)
+        {
+            items[i].data.relatedItem = propsPool.RandomElement();
+        }
+    }
+
+    public Item GetQuestItemWithProbability(float probability)
     {
         if (activeEnemyItems.Contains(specialItem))
             return null;
         else
         {
-            return Random.Range(0f, 1f) < spawnChance ? specialItem : null;
+            return Random.Range(0f, 1f) < probability ? specialItem : null;
         }
+    }
+
+    [Button]
+    public void SpawnQuestItem()
+    {
+        var item = InstantiateItem(specialItem, Vector3.up + Vector3.forward * 2, Quaternion.identity);
+        item.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     private List<int> GenerateIndiciesArray(int range)

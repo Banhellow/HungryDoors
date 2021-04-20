@@ -97,6 +97,7 @@ public class Item: MonoBehaviour, IUsable
         else
         {
             item.transform.position = transform.position;
+            item.GetComponent<Rigidbody>().isKinematic = false;
             return null;
         }
 

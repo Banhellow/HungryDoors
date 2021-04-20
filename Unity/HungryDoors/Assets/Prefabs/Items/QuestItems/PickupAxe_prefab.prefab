@@ -71,6 +71,8 @@ GameObject:
   - component: {fileID: 1023513743204124255}
   - component: {fileID: 2889804246496291285}
   - component: {fileID: 1317672897082324972}
+  - component: {fileID: 16711322341648062}
+  - component: {fileID: 905372385235285347}
   m_Layer: 8
   m_Name: PickupAxe_prefab
   m_TagString: PickupItem
@@ -113,7 +115,7 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     damage: 15
-    maxDurability: 2
+    maxDurability: 10
     pushForce: 1000
     selfItem: {fileID: 1023513743204124255}
   itemVFX: {fileID: 0}
@@ -150,6 +152,45 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.2, z: 0}
+--- !u!114 &16711322341648062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728008970029929498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe469231e38563a4eaa9a08b2ef0d639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 1
+  dropItem:
+    icon: {fileID: 6531174680928083734, guid: 3ef72418ac221de48b71f9651931b291, type: 3}
+    type: 0
+    foodType: 1
+    weaponType: 0
+    usageType: 1
+    animationType: 0
+    damage: 2
+    maxDurability: 10
+    pushForce: 1000
+    selfItem: {fileID: 5987376482885374693, guid: 5bd27316ee7ca124e8f3e483f0f7c7f9,
+      type: 3}
+--- !u!136 &905372385235285347
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728008970029929498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!1001 &447137740391940071
 PrefabInstance:
   m_ObjectHideFlags: 0
