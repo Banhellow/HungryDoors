@@ -1,4 +1,6 @@
-﻿using NaughtyAttributes;
+﻿#if UNITY_EDITOR
+
+using NaughtyAttributes;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -77,3 +79,5 @@ public class MaterialFixer : MonoBehaviour
         return errorPink;
     }
 }
+
+#endif
