@@ -504,7 +504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeFillImage: {fileID: 3807945762454359285}
   playerItemIconImage: {fileID: 3807945762478104171}
-  emptySlotSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  emptySlotSprite: {fileID: -6003071882047758122, guid: fc5d6eb745498304f94f6582ca00fd55,
+    type: 3}
   itemUsageLeftText: {fileID: 3211199638989492932}
   dialogCG: {fileID: 3807945762303565223}
   dialogPortraitImage: {fileID: 3807945761377519519}
@@ -849,7 +850,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3807945762303565218}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -1038,7 +1039,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 80}
+  m_SizeDelta: {x: 100.115234, y: 80}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &2148812441265257626
 CanvasRenderer:
@@ -1069,8 +1070,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ae00ec54a7d15e4a82ce764f7a49b03, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 3e71599baa54c7f4a9567b9d943a994f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1094,8 +1095,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

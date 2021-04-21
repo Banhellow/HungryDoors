@@ -17,23 +17,23 @@ public class Hitbox : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log($"Hitbox OnTriggerEnter : {other}");
-        DamageCollider dc = other.gameObject.GetComponent<DamageCollider>();
+        Item dc = other.gameObject.GetComponent<Item>();
 
         if (dc == null)
             return;
 
         // check if is in use
-        if (dc.isInUse == false)
+        if (dc.isInUsage == false)
             return;
 
         // dont hit yoursefl
-        if (dc.isPlayersItem == lifeController.myCharacter.isPlayer)
+        if (dc.isOwnByPlayer == lifeController.myCharacter.isPlayer)
             return;
 
         if (Time.realtimeSinceStartup >= lastDamageTime + damageMinDelay)
         {
             lastDamageTime = Time.realtimeSinceStartup;
-            lifeController.GetDamage(dc.damage);
+            lifeController.GetDamage(dc.data.damage);
         }
     }
 }

@@ -29,11 +29,15 @@ public class EnemyController : Character
     public float attackDelay = 3;
     private float lastAttackTime = 0;
 
+    public Item weapon;
+
 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         movementMinDistance = agent.stoppingDistance;
+
+        weapon.isInUsage = true;
 
         if (currentState == EnemyState.Patrol)
             SetMovementGoal(partolPoints[currentPartolPoint % partolPoints.Count]);
@@ -41,6 +45,9 @@ public class EnemyController : Character
 
     void Update()
     {
+        if (isDead)
+            return;
+
         agent.destination = movementGoal.position;
 
         if (currentState == EnemyState.Idle)
@@ -188,6 +195,7 @@ public class EnemyController : Character
     public override void Die()
     {
         base.Die();
+        StopAgentMovement();
         Debug.Log($"Enemy {gameObject.name} dead.");
     }
 }

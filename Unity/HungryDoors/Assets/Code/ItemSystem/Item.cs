@@ -17,6 +17,9 @@ public class Item : MonoBehaviour, IUsable
     private SoundManager soundManager;
     private bool _isInUsage = false;
     private bool _hasLanded = true;
+    public bool isOwnByPlayer = false;
+
+
     public bool isInUsage { get => _isInUsage; set => _isInUsage = value; }
 
     [Inject]
@@ -96,7 +99,7 @@ public class Item : MonoBehaviour, IUsable
         item.data = data.relatedItem;
         if (this.isInUsage)
         {
-            item.OnPickup(transform.parent);
+            item.OnPickup(transform.parent, true);
             GUIManager.UpdatePlayerItem(item);
             return item;
         }
@@ -108,9 +111,10 @@ public class Item : MonoBehaviour, IUsable
         }
     }
 
-    internal void OnPickup(Transform parentTR)
+    internal void OnPickup(Transform parentTR, bool pickedUpByPlayer)
     {
         Debug.Log($"OnPickup {this.name}");
+        isOwnByPlayer = pickedUpByPlayer;
         soundManager.PlaySfx(SFX.ItemPickup);
         itemRB.isKinematic = true;
         transform.SetParent(parentTR);
