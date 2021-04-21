@@ -34343,6 +34343,29 @@ PrefabInstance:
       objectReference: {fileID: 764433638}
     - target: {fileID: 8326392303557715343, guid: c417b19e9d0ab104d9bf896650f17204,
         type: 3}
+      propertyPath: lootPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326392303557715343, guid: c417b19e9d0ab104d9bf896650f17204,
+        type: 3}
+      propertyPath: lootPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3125323425200694687, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+        type: 3}
+    - target: {fileID: 8326392303557715343, guid: c417b19e9d0ab104d9bf896650f17204,
+        type: 3}
+      propertyPath: lootPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 3125323425200694687, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+        type: 3}
+    - target: {fileID: 8326392303557715343, guid: c417b19e9d0ab104d9bf896650f17204,
+        type: 3}
+      propertyPath: lootPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 3125323425200694687, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+        type: 3}
+    - target: {fileID: 8326392303557715343, guid: c417b19e9d0ab104d9bf896650f17204,
+        type: 3}
       propertyPath: partolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 764433638}

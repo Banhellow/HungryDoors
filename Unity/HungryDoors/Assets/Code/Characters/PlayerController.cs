@@ -128,6 +128,7 @@ public class PlayerController : Character
                 {
                     rightArmHandleTR.BB_DestroyAllChildren();
                     currentItem = item;
+                    soundManager.PlaySfx(SFX.ItemPickup);
                     item.OnPickup(rightArmHandleTR, true);
                     guiManager.UpdatePlayerItem(item);
                     return;
