@@ -262,6 +262,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -274,6 +277,7 @@ MonoBehaviour:
   itemRB: {fileID: 5580645}
   itemCollider: {fileID: 5580643}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &10022600
 PrefabInstance:
@@ -689,6 +693,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 4
     maxDurability: 1
     pushForce: 1000
@@ -701,6 +708,7 @@ MonoBehaviour:
   itemRB: {fileID: 14202429}
   itemCollider: {fileID: 14202427}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &17085003
 PrefabInstance:
@@ -837,6 +845,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -849,6 +860,7 @@ MonoBehaviour:
   itemRB: {fileID: 17085007}
   itemCollider: {fileID: 17085005}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &20656008
 PrefabInstance:
@@ -2360,6 +2372,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -2372,6 +2387,7 @@ MonoBehaviour:
   itemRB: {fileID: 76903508}
   itemCollider: {fileID: 76903506}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &79379370
 PrefabInstance:
@@ -2455,6 +2471,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8466102981920656639, guid: c417b19e9d0ab104d9bf896650f17204,
+        type: 3}
+      propertyPath: data.destroyVFX
+      value: 
+      objectReference: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c417b19e9d0ab104d9bf896650f17204, type: 3}
 --- !u!1001 &85796144
@@ -2613,6 +2635,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -2625,6 +2650,7 @@ MonoBehaviour:
   itemRB: {fileID: 85796149}
   itemCollider: {fileID: 85796147}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &87556958
 PrefabInstance:
@@ -3108,6 +3134,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -3120,6 +3149,7 @@ MonoBehaviour:
   itemRB: {fileID: 90394431}
   itemCollider: {fileID: 90394430}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &93511762
 GameObject:
@@ -3338,6 +3368,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -3350,6 +3383,7 @@ MonoBehaviour:
   itemRB: {fileID: 105532340}
   itemCollider: {fileID: 105532338}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &110040025
 PrefabInstance:
@@ -3947,6 +3981,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -3959,6 +3996,7 @@ MonoBehaviour:
   itemRB: {fileID: 131924655}
   itemCollider: {fileID: 131924653}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &133951810
 PrefabInstance:
@@ -4261,6 +4299,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -4273,6 +4314,7 @@ MonoBehaviour:
   itemRB: {fileID: 142772493}
   itemCollider: {fileID: 142772491}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &144758960 stripped
 GameObject:
@@ -6427,6 +6469,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 7
     maxDurability: 1
     pushForce: 1000
@@ -6439,6 +6484,7 @@ MonoBehaviour:
   itemRB: {fileID: 251804666}
   itemCollider: {fileID: 251804664}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &252313448
 PrefabInstance:
@@ -7278,6 +7324,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -7290,6 +7339,7 @@ MonoBehaviour:
   itemRB: {fileID: 288739585}
   itemCollider: {fileID: 288739584}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &289304104
 PrefabInstance:
@@ -7612,6 +7662,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -7624,6 +7677,7 @@ MonoBehaviour:
   itemRB: {fileID: 297800773}
   itemCollider: {fileID: 297800771}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &305815690
 PrefabInstance:
@@ -8271,6 +8325,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -8283,6 +8340,7 @@ MonoBehaviour:
   itemRB: {fileID: 340998239}
   itemCollider: {fileID: 340998237}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &344991390
 PrefabInstance:
@@ -9729,6 +9787,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -9741,6 +9802,7 @@ MonoBehaviour:
   itemRB: {fileID: 387733505}
   itemCollider: {fileID: 387733503}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &396774063
 PrefabInstance:
@@ -10181,6 +10243,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -10193,6 +10258,7 @@ MonoBehaviour:
   itemRB: {fileID: 410267188}
   itemCollider: {fileID: 410267186}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &415444894
 PrefabInstance:
@@ -12138,6 +12204,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -12150,6 +12219,7 @@ MonoBehaviour:
   itemRB: {fileID: 504097191}
   itemCollider: {fileID: 504097190}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &504401420
 PrefabInstance:
@@ -12561,7 +12631,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1238218227891777710, guid: 29b65f411e855ef4296d78aa2f92bd5f, type: 3}
 --- !u!54 &521490400
@@ -12600,6 +12670,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 7
     maxDurability: 2
     pushForce: 1000
@@ -12612,6 +12685,7 @@ MonoBehaviour:
   itemRB: {fileID: 521490400}
   itemCollider: {fileID: 521490398}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &524916824 stripped
 GameObject:
@@ -13171,6 +13245,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -13183,6 +13260,7 @@ MonoBehaviour:
   itemRB: {fileID: 567849629}
   itemCollider: {fileID: 567849627}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &571561281
 PrefabInstance:
@@ -14295,6 +14373,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -14307,6 +14388,7 @@ MonoBehaviour:
   itemRB: {fileID: 644766848}
   itemCollider: {fileID: 644766846}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &648441630
 PrefabInstance:
@@ -14529,7 +14611,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1238218227891777710, guid: 29b65f411e855ef4296d78aa2f92bd5f, type: 3}
 --- !u!54 &651460720
@@ -14568,6 +14650,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 7
     maxDurability: 2
     pushForce: 1000
@@ -14580,6 +14665,7 @@ MonoBehaviour:
   itemRB: {fileID: 651460720}
   itemCollider: {fileID: 651460718}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &655318563
 GameObject:
@@ -14590,7 +14676,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 655318564}
-  - component: {fileID: 655318565}
   m_Layer: 0
   m_Name: HiddenFurnitures_LibraryRoom
   m_TagString: Untagged
@@ -14632,19 +14717,6 @@ Transform:
   m_Father: {fileID: 1968005126}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &655318565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655318563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c65d5cf7db5eba54b9ddb8a8d1041fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enviroVisuals: {fileID: 655318563}
 --- !u!4 &657684268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef40f59750d12d84681801989ed37bf9,
@@ -14852,6 +14924,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -14864,6 +14939,7 @@ MonoBehaviour:
   itemRB: {fileID: 678668625}
   itemCollider: {fileID: 678668623}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &683515124
 PrefabInstance:
@@ -16170,6 +16246,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -16182,6 +16261,7 @@ MonoBehaviour:
   itemRB: {fileID: 709556484}
   itemCollider: {fileID: 709556482}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &714791277
 PrefabInstance:
@@ -16458,6 +16538,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -16470,6 +16553,7 @@ MonoBehaviour:
   itemRB: {fileID: 724396812}
   itemCollider: {fileID: 724396810}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &724869060
 PrefabInstance:
@@ -17854,6 +17938,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -17866,6 +17953,7 @@ MonoBehaviour:
   itemRB: {fileID: 769299597}
   itemCollider: {fileID: 769299595}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &774867123
 PrefabInstance:
@@ -18102,6 +18190,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -18114,6 +18205,7 @@ MonoBehaviour:
   itemRB: {fileID: 777496941}
   itemCollider: {fileID: 777496939}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &778321686
 PrefabInstance:
@@ -18966,6 +19058,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -18978,6 +19073,7 @@ MonoBehaviour:
   itemRB: {fileID: 821909973}
   itemCollider: {fileID: 821909971}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &829148764
 PrefabInstance:
@@ -20426,6 +20522,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -20438,6 +20537,7 @@ MonoBehaviour:
   itemRB: {fileID: 887709491}
   itemCollider: {fileID: 887709489}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &890864673
 PrefabInstance:
@@ -20972,6 +21072,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -20984,6 +21087,7 @@ MonoBehaviour:
   itemRB: {fileID: 910756654}
   itemCollider: {fileID: 910756652}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &911017956
 PrefabInstance:
@@ -21215,6 +21319,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 4
     maxDurability: 1
     pushForce: 1000
@@ -21227,6 +21334,7 @@ MonoBehaviour:
   itemRB: {fileID: 911700897}
   itemCollider: {fileID: 911700895}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &912630799
 PrefabInstance:
@@ -21369,6 +21477,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -21381,6 +21492,7 @@ MonoBehaviour:
   itemRB: {fileID: 912630804}
   itemCollider: {fileID: 912630802}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &913227567
 GameObject:
@@ -22813,6 +22925,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -22825,6 +22940,7 @@ MonoBehaviour:
   itemRB: {fileID: 984735828}
   itemCollider: {fileID: 984735826}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &989066348
 PrefabInstance:
@@ -22967,6 +23083,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -22979,6 +23098,7 @@ MonoBehaviour:
   itemRB: {fileID: 989066352}
   itemCollider: {fileID: 989066351}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!4 &990156780 stripped
 Transform:
@@ -24352,6 +24472,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -24364,6 +24487,7 @@ MonoBehaviour:
   itemRB: {fileID: 1090698690}
   itemCollider: {fileID: 1090698688}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!4 &1095369540 stripped
 Transform:
@@ -24527,6 +24651,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -24539,6 +24666,7 @@ MonoBehaviour:
   itemRB: {fileID: 1098246112}
   itemCollider: {fileID: 1098246110}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1099657688
 PrefabInstance:
@@ -25345,6 +25473,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -25357,6 +25488,7 @@ MonoBehaviour:
   itemRB: {fileID: 1126640081}
   itemCollider: {fileID: 1126640080}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1132816398
 PrefabInstance:
@@ -25499,6 +25631,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -25511,6 +25646,7 @@ MonoBehaviour:
   itemRB: {fileID: 1132816403}
   itemCollider: {fileID: 1132816401}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &1144347429 stripped
 GameObject:
@@ -25787,6 +25923,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -25799,6 +25938,7 @@ MonoBehaviour:
   itemRB: {fileID: 1152025451}
   itemCollider: {fileID: 1152025449}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1152656187
 PrefabInstance:
@@ -25957,6 +26097,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8466102981920656639, guid: c417b19e9d0ab104d9bf896650f17204,
+        type: 3}
+      propertyPath: data.destroyVFX
+      value: 
+      objectReference: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c417b19e9d0ab104d9bf896650f17204, type: 3}
 --- !u!1001 &1155821873
@@ -26215,6 +26361,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -26227,6 +26376,7 @@ MonoBehaviour:
   itemRB: {fileID: 1158897886}
   itemCollider: {fileID: 1158897884}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1159900996
 PrefabInstance:
@@ -26927,6 +27077,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -26939,6 +27092,7 @@ MonoBehaviour:
   itemRB: {fileID: 1171606790}
   itemCollider: {fileID: 1171606789}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1171785211
 PrefabInstance:
@@ -27501,6 +27655,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -27513,6 +27670,7 @@ MonoBehaviour:
   itemRB: {fileID: 1201839455}
   itemCollider: {fileID: 1201839453}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1205320534
 PrefabInstance:
@@ -28138,6 +28296,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -28150,6 +28311,7 @@ MonoBehaviour:
   itemRB: {fileID: 1221756307}
   itemCollider: {fileID: 1221756305}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1234820092
 PrefabInstance:
@@ -28565,6 +28727,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 7
     maxDurability: 2
     pushForce: 1000
@@ -28577,6 +28742,7 @@ MonoBehaviour:
   itemRB: {fileID: 1257932599}
   itemCollider: {fileID: 1257932597}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1258497365
 PrefabInstance:
@@ -28911,7 +29077,7 @@ Transform:
   m_Children:
   - {fileID: 42563553}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1270002412
 PrefabInstance:
@@ -29278,6 +29444,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -29290,6 +29459,7 @@ MonoBehaviour:
   itemRB: {fileID: 1284122447}
   itemCollider: {fileID: 1284122445}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1285570813
 PrefabInstance:
@@ -29427,6 +29597,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -29439,6 +29612,7 @@ MonoBehaviour:
   itemRB: {fileID: 1290194063}
   itemCollider: {fileID: 1290194061}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1290875119
 PrefabInstance:
@@ -29789,6 +29963,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -29801,6 +29978,7 @@ MonoBehaviour:
   itemRB: {fileID: 1293203526}
   itemCollider: {fileID: 1293203524}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1295490201
 PrefabInstance:
@@ -29919,7 +30097,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1238218227891777710, guid: 29b65f411e855ef4296d78aa2f92bd5f, type: 3}
 --- !u!54 &1301106540
@@ -29958,6 +30136,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 7
     maxDurability: 2
     pushForce: 1000
@@ -29970,6 +30151,7 @@ MonoBehaviour:
   itemRB: {fileID: 1301106540}
   itemCollider: {fileID: 1301106538}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &1302621436 stripped
 GameObject:
@@ -30532,6 +30714,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -30544,6 +30729,7 @@ MonoBehaviour:
   itemRB: {fileID: 1343358804}
   itemCollider: {fileID: 1343358802}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1349660135
 PrefabInstance:
@@ -31534,6 +31720,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8466102981920656639, guid: c417b19e9d0ab104d9bf896650f17204,
+        type: 3}
+      propertyPath: data.destroyVFX
+      value: 
+      objectReference: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c417b19e9d0ab104d9bf896650f17204, type: 3}
 --- !u!1001 &1400192957
@@ -31811,6 +32003,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -31823,6 +32018,7 @@ MonoBehaviour:
   itemRB: {fileID: 1411011923}
   itemCollider: {fileID: 1411011921}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &1413380109 stripped
 GameObject:
@@ -32369,6 +32565,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -32381,6 +32580,7 @@ MonoBehaviour:
   itemRB: {fileID: 1438923864}
   itemCollider: {fileID: 1438923863}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1439294315
 PrefabInstance:
@@ -32597,7 +32797,7 @@ PrefabInstance:
     - target: {fileID: 3807945761942661628, guid: 91b44161d97504747a287d4162cb13ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3807945761942661628, guid: 91b44161d97504747a287d4162cb13ad,
         type: 3}
@@ -33010,6 +33210,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -33022,6 +33225,7 @@ MonoBehaviour:
   itemRB: {fileID: 1460389082}
   itemCollider: {fileID: 1460389080}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1474781335
 PrefabInstance:
@@ -33382,6 +33586,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -33394,6 +33601,7 @@ MonoBehaviour:
   itemRB: {fileID: 1488553759}
   itemCollider: {fileID: 1488553758}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1490087661
 PrefabInstance:
@@ -34736,6 +34944,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -34748,6 +34959,7 @@ MonoBehaviour:
   itemRB: {fileID: 1557027861}
   itemCollider: {fileID: 1557027859}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1557065289
 PrefabInstance:
@@ -34872,7 +35084,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1238218227891777710, guid: 29b65f411e855ef4296d78aa2f92bd5f, type: 3}
 --- !u!54 &1560035483
@@ -34911,6 +35123,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 7
     maxDurability: 2
     pushForce: 1000
@@ -34923,6 +35138,7 @@ MonoBehaviour:
   itemRB: {fileID: 1560035483}
   itemCollider: {fileID: 1560035481}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1564140077
 PrefabInstance:
@@ -37176,6 +37392,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8466102981920656639, guid: c417b19e9d0ab104d9bf896650f17204,
+        type: 3}
+      propertyPath: data.destroyVFX
+      value: 
+      objectReference: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c417b19e9d0ab104d9bf896650f17204, type: 3}
 --- !u!1001 &1665189242
@@ -37518,6 +37740,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -37530,6 +37755,7 @@ MonoBehaviour:
   itemRB: {fileID: 1671506185}
   itemCollider: {fileID: 1671506183}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1677104911
 PrefabInstance:
@@ -38348,6 +38574,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -38360,6 +38589,7 @@ MonoBehaviour:
   itemRB: {fileID: 1723198803}
   itemCollider: {fileID: 1723198801}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1724514781
 PrefabInstance:
@@ -38496,6 +38726,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -38508,6 +38741,7 @@ MonoBehaviour:
   itemRB: {fileID: 1724514785}
   itemCollider: {fileID: 1724514783}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1725546827
 PrefabInstance:
@@ -38790,6 +39024,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8466102981920656639, guid: c417b19e9d0ab104d9bf896650f17204,
+        type: 3}
+      propertyPath: data.destroyVFX
+      value: 
+      objectReference: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c417b19e9d0ab104d9bf896650f17204, type: 3}
 --- !u!1001 &1734572594
@@ -39167,6 +39407,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 15
     maxDurability: 7
     pushForce: 1000
@@ -39179,6 +39422,7 @@ MonoBehaviour:
   itemRB: {fileID: 1748600674}
   itemCollider: {fileID: 1748600672}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1749348038
 PrefabInstance:
@@ -39570,6 +39814,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -39582,6 +39829,7 @@ MonoBehaviour:
   itemRB: {fileID: 1757636031}
   itemCollider: {fileID: 1757636029}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1764131441
 PrefabInstance:
@@ -39804,6 +40052,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -39816,6 +40067,7 @@ MonoBehaviour:
   itemRB: {fileID: 1764724540}
   itemCollider: {fileID: 1764724538}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1772887282
 PrefabInstance:
@@ -39958,6 +40210,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -39970,6 +40225,7 @@ MonoBehaviour:
   itemRB: {fileID: 1772887287}
   itemCollider: {fileID: 1772887285}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1773658843
 PrefabInstance:
@@ -40197,6 +40453,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -40209,6 +40468,7 @@ MonoBehaviour:
   itemRB: {fileID: 1773912390}
   itemCollider: {fileID: 1773912388}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &1775414085 stripped
 GameObject:
@@ -41528,6 +41788,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -41540,6 +41803,7 @@ MonoBehaviour:
   itemRB: {fileID: 1831922320}
   itemCollider: {fileID: 1831922319}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1835581680
 PrefabInstance:
@@ -41854,6 +42118,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -41866,6 +42133,7 @@ MonoBehaviour:
   itemRB: {fileID: 1845310748}
   itemCollider: {fileID: 1845310746}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1851155825
 PrefabInstance:
@@ -42709,6 +42977,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -42721,6 +42992,7 @@ MonoBehaviour:
   itemRB: {fileID: 1876591353}
   itemCollider: {fileID: 1876591351}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1880242821
 PrefabInstance:
@@ -43016,7 +43288,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1886729133}
-  - component: {fileID: 1886729134}
   m_Layer: 0
   m_Name: HiddenItems_LibraryRoom
   m_TagString: Untagged
@@ -43050,19 +43321,6 @@ Transform:
   m_Father: {fileID: 1968005126}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1886729134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886729132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c65d5cf7db5eba54b9ddb8a8d1041fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enviroVisuals: {fileID: 1886729132}
 --- !u!1001 &1899920630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43397,6 +43655,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -43409,6 +43670,7 @@ MonoBehaviour:
   itemRB: {fileID: 1901723321}
   itemCollider: {fileID: 1901723319}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1905069031
 PrefabInstance:
@@ -43566,6 +43828,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -43578,6 +43843,7 @@ MonoBehaviour:
   itemRB: {fileID: 1905069036}
   itemCollider: {fileID: 1905069034}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &1905410254
 PrefabInstance:
@@ -43810,6 +44076,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -43822,6 +44091,7 @@ MonoBehaviour:
   itemRB: {fileID: 1911372657}
   itemCollider: {fileID: 1911372655}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &1913308028
 GameObject:
@@ -43943,6 +44213,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 20
     maxDurability: 10
     pushForce: 0
@@ -43958,6 +44230,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 20
     maxDurability: 10
     pushForce: 0
@@ -43973,6 +44247,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 20
     maxDurability: 10
     pushForce: 0
@@ -43988,6 +44264,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 20
     maxDurability: 10
     pushForce: 0
@@ -44003,6 +44281,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 20
     maxDurability: 10
     pushForce: 0
@@ -44019,6 +44299,8 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -44034,6 +44316,8 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -44049,6 +44333,8 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -44064,6 +44350,8 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -44079,6 +44367,8 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -44094,6 +44384,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 2
     pushForce: 1000
@@ -44109,6 +44401,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 2
     pushForce: 1000
@@ -44124,6 +44418,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 2
     pushForce: 1000
@@ -44139,6 +44435,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 2
     pushForce: 1000
@@ -44154,6 +44452,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 2
     pushForce: 1000
@@ -44169,6 +44469,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 2
     pushForce: 1000
@@ -44184,6 +44486,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 2
     pushForce: 1000
@@ -44199,6 +44503,8 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 2
     pushForce: 1000
@@ -44215,6 +44521,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 1
     pushForce: 1000
@@ -44230,6 +44539,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -44245,6 +44557,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 3
     pushForce: 0
@@ -44260,6 +44575,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 7
     maxDurability: 4
     pushForce: 1000
@@ -44275,6 +44593,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 6
     maxDurability: 1
     pushForce: 1000
@@ -44290,6 +44611,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 3
     maxDurability: 1
     pushForce: 1000
@@ -44867,6 +45191,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -44879,6 +45206,7 @@ MonoBehaviour:
   itemRB: {fileID: 1939911128}
   itemCollider: {fileID: 1939911126}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!54 &1939911128
 Rigidbody:
@@ -45446,6 +45774,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -45458,6 +45789,7 @@ MonoBehaviour:
   itemRB: {fileID: 1973765284}
   itemCollider: {fileID: 1973765282}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &1974010496
 GameObject:
@@ -46946,6 +47278,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -46958,6 +47293,7 @@ MonoBehaviour:
   itemRB: {fileID: 2012249617}
   itemCollider: {fileID: 2012249615}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &2016607238
 PrefabInstance:
@@ -47398,6 +47734,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 1
     pushForce: 1000
@@ -47410,6 +47749,7 @@ MonoBehaviour:
   itemRB: {fileID: 2024424051}
   itemCollider: {fileID: 2024424049}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &2028624738
 PrefabInstance:
@@ -47717,6 +48057,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -47729,6 +48072,7 @@ MonoBehaviour:
   itemRB: {fileID: 2039953542}
   itemCollider: {fileID: 2039953540}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &2040899936 stripped
 GameObject:
@@ -47884,6 +48228,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 7
     maxDurability: 1
     pushForce: 1000
@@ -47896,6 +48243,7 @@ MonoBehaviour:
   itemRB: {fileID: 2053951478}
   itemCollider: {fileID: 2053951476}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &2059041129 stripped
 GameObject:
@@ -47934,7 +48282,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1238218227891777710, guid: 29b65f411e855ef4296d78aa2f92bd5f, type: 3}
 --- !u!54 &2059731136
@@ -47973,6 +48321,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 7
     maxDurability: 2
     pushForce: 1000
@@ -47985,6 +48336,7 @@ MonoBehaviour:
   itemRB: {fileID: 2059731136}
   itemCollider: {fileID: 2059731134}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &2061924275
 PrefabInstance:
@@ -48221,6 +48573,9 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 1
     pushForce: 1000
@@ -48233,6 +48588,7 @@ MonoBehaviour:
   itemRB: {fileID: 2063461120}
   itemCollider: {fileID: 2063461119}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &2065622537
 PrefabInstance:
@@ -48609,6 +48965,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -48621,6 +48980,7 @@ MonoBehaviour:
   itemRB: {fileID: 2077818810}
   itemCollider: {fileID: 2077818808}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1 &2078897198 stripped
 GameObject:
@@ -49282,6 +49642,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -49294,6 +49657,7 @@ MonoBehaviour:
   itemRB: {fileID: 2107524263}
   itemCollider: {fileID: 2107524261}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &2109388714
 PrefabInstance:
@@ -49436,6 +49800,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -49448,6 +49815,7 @@ MonoBehaviour:
   itemRB: {fileID: 2109388718}
   itemCollider: {fileID: 2109388717}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &2109649052
 PrefabInstance:
@@ -49590,6 +49958,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 5
     maxDurability: 4
     pushForce: 1000
@@ -49602,6 +49973,7 @@ MonoBehaviour:
   itemRB: {fileID: 2109649057}
   itemCollider: {fileID: 2109649055}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &2110602354
 PrefabInstance:
@@ -49929,6 +50301,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -49941,6 +50316,7 @@ MonoBehaviour:
   itemRB: {fileID: 2136940907}
   itemCollider: {fileID: 2136940906}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &2140901274
 PrefabInstance:
@@ -50083,6 +50459,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 10
     maxDurability: 5
     pushForce: 1000
@@ -50095,6 +50474,7 @@ MonoBehaviour:
   itemRB: {fileID: 2140901278}
   itemCollider: {fileID: 2140901277}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
 --- !u!1001 &2143092359
 PrefabInstance:

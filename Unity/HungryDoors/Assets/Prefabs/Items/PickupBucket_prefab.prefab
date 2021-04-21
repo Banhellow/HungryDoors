@@ -54,6 +54,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 0
     maxDurability: 2
     pushForce: 1000

@@ -101,6 +101,9 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 15
     maxDurability: 10
     pushForce: 1000
@@ -165,6 +168,8 @@ MonoBehaviour:
     usageType: 1
     animationType: 0
     sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
     damage: 2
     maxDurability: 10
     pushForce: 1000

@@ -18,6 +18,9 @@ public class ItemData
     public AnimationType animationType;
     [Header("SFX")]
     public SFX sfx;
+    [Header("VFX")]
+    public GameObject destroyVFX;
+    public GameObject useVFX;
 
     [Header("Item settings")]
     public int damage; 
@@ -32,4 +35,6 @@ public class ItemData
     public CheatType cheatType;
     [ShowIf("isQuestItem")]
     public int level;
+
+
 }

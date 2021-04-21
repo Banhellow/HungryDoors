@@ -14,11 +14,11 @@ public class Item : MonoBehaviour, IUsable
     [ReadOnly] public int durability = 0;
 
     private GUIManager GUIManager;
-    private ItemManager itemManager;
-    private SoundManager soundManager;
+    protected ItemManager itemManager;
+    protected SoundManager soundManager;
     private DoorController doorController;
     private bool _isInUsage = false;
-    private bool _hasLanded = true;
+    public bool _hasLanded = true;
     public bool isOwnByPlayer = false;
 
 
@@ -105,6 +105,7 @@ public class Item : MonoBehaviour, IUsable
                 GUIManager.ItemLost();
 
             soundManager.PlaySfxWithDelay(SFX.ItemBreaks, 0.7f);
+            Instantiate(data.destroyVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
             return Item;
         }
