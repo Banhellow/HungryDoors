@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GUIManager : MonoBehaviour
@@ -26,12 +27,15 @@ public class GUIManager : MonoBehaviour
     private float dialogVisibilityTime;
     private bool forceEndTextAnim = false;
 
+    [Header("GameOver")]
+    public CanvasGroup gameoverCG;
+    public CanvasGroup gameoverTextCG;
 
     private void Update()
     {
-        if(isDialogOpen)
+        if (isDialogOpen)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 forceEndTextAnim = true;
             }
@@ -143,7 +147,12 @@ public class GUIManager : MonoBehaviour
     }
 
 
-
+    [Button]
+    public void OnGameOver()
+    {
+        gameoverCG.DOFade(1, 2f).OnComplete(() => gameoverTextCG.DOFade(0, 0.9f));
+        DOVirtual.DelayedCall(3, () => { SceneManager.LoadScene(0); });
+    }
 
 
     [Button]

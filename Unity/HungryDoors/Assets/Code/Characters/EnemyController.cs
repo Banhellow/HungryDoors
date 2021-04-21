@@ -1,4 +1,5 @@
-﻿using NaughtyAttributes;
+﻿using DG.Tweening;
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -178,9 +179,10 @@ public class EnemyController : Character
     private void Attack()
     {
         Debug.Log("Attack");
+        weapon.itemCollider.enabled = true;
+        DOVirtual.DelayedCall(0.6f, () => weapon.itemCollider.enabled = false);
         animator.SetTrigger(attackParam);
         lastAttackTime = Time.timeSinceLevelLoad;
-        
     }
 
     #endregion Attack

@@ -10,6 +10,7 @@ public class Item : MonoBehaviour, IUsable
     public GameObject itemVFX;
     public GameObject pickupVisuals;
     public Rigidbody itemRB;
+    public Collider itemCollider;
     [ReadOnly] public int durability = 0;
 
     private GUIManager GUIManager;
@@ -29,6 +30,12 @@ public class Item : MonoBehaviour, IUsable
         itemManager = itemMan;
         soundManager = sound;
     }
+
+    private void Awake()
+    {
+        itemCollider = GetComponent<Collider>();
+    }
+
     private void Start()
     {
     }
@@ -62,6 +69,7 @@ public class Item : MonoBehaviour, IUsable
     {
         soundManager.PlaySfx(SFX.Throw);
         itemRB.isKinematic = false;
+        itemCollider.enabled = true;
         _hasLanded = false;
         Vector3 lookAtDir = GetComponentInParent<PlayerController>().LookDirection;
         transform.SetParent(null);
@@ -117,6 +125,7 @@ public class Item : MonoBehaviour, IUsable
         isOwnByPlayer = pickedUpByPlayer;
         soundManager.PlaySfx(SFX.ItemPickup);
         itemRB.isKinematic = true;
+        itemCollider.enabled = false;
         transform.SetParent(parentTR);
         transform.localPosition = Vector3.zero;
         transform.localScale = Vector3.one;

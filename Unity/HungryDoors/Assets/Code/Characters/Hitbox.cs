@@ -16,7 +16,7 @@ public class Hitbox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Hitbox OnTriggerEnter : {other}");
+        Debug.Log($"Hitbox OnTriggerEnter : {other} HIT: {lifeController.name}");
         Item dc = other.gameObject.GetComponent<Item>();
 
         if (dc == null)

@@ -4610,6 +4610,7 @@ MonoBehaviour:
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 319546454}
+  itemCollider: {fileID: 0}
   durability: 0
   isOwnByPlayer: 0
 --- !u!1001 &322316891
@@ -5279,6 +5280,7 @@ MonoBehaviour:
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 366625487}
+  itemCollider: {fileID: 0}
   durability: 0
   isOwnByPlayer: 0
 --- !u!54 &366625487
@@ -7348,6 +7350,7 @@ MonoBehaviour:
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 516163613}
+  itemCollider: {fileID: 0}
   durability: 0
   isOwnByPlayer: 0
 --- !u!1 &518096972 stripped
@@ -7396,6 +7399,7 @@ MonoBehaviour:
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 518096977}
+  itemCollider: {fileID: 0}
   durability: 0
   isOwnByPlayer: 0
 --- !u!54 &518096977
@@ -9065,8 +9069,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3807945762073743457, guid: 91b44161d97504747a287d4162cb13ad,
+        type: 3}
+      propertyPath: gameoverTextCG
+      value: 
+      objectReference: {fileID: 647162000}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91b44161d97504747a287d4162cb13ad, type: 3}
+--- !u!1 &647161999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4048036211202143987, guid: 91b44161d97504747a287d4162cb13ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 647161998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &647162000
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647161999}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &650230088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c733b0b2fcb38c749bfe085315481da5,
@@ -15625,6 +15652,7 @@ MonoBehaviour:
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 1030724056}
+  itemCollider: {fileID: 0}
   durability: 0
   isOwnByPlayer: 0
 --- !u!1 &1037409142 stripped
@@ -19934,6 +19962,7 @@ MonoBehaviour:
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 1299053248}
+  itemCollider: {fileID: 0}
   durability: 0
   isOwnByPlayer: 0
 --- !u!54 &1299053248
@@ -24069,6 +24098,7 @@ MonoBehaviour:
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 1494571932}
+  itemCollider: {fileID: 0}
   durability: 0
   isOwnByPlayer: 0
 --- !u!1001 &1495971803
@@ -28198,6 +28228,7 @@ MonoBehaviour:
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 1704888552}
+  itemCollider: {fileID: 0}
   durability: 0
   isOwnByPlayer: 0
 --- !u!1001 &1705969164
@@ -29224,6 +29255,7 @@ MonoBehaviour:
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 1753439413}
+  itemCollider: {fileID: 0}
   durability: 0
   isOwnByPlayer: 0
 --- !u!1 &1754032481 stripped
