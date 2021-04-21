@@ -48,7 +48,7 @@ public class Item : MonoBehaviour, IUsable
         {
             _hasLanded = true;
             Debug.Log("Collision detected: " + collision.gameObject);
-            ChangeItemDurability();
+            ChangeItemDurability(data.damage);
         }
     }
 
@@ -60,7 +60,7 @@ public class Item : MonoBehaviour, IUsable
         }
         else
         {
-            return ChangeItemDurability();
+            return ChangeItemDurability(1);
         }
 
     }
@@ -77,9 +77,9 @@ public class Item : MonoBehaviour, IUsable
         isInUsage = false;
         return null;
     }
-    public virtual Item ChangeItemDurability()
+    public virtual Item ChangeItemDurability(int changeValue)
     {
-        durability++;
+        durability += changeValue;
         if (isInUsage)
             GUIManager.UpdateItemDurability(this);
 

@@ -31,3 +31,10 @@ public enum UsageType
     InHands,
     Throw
 }
+
+public enum CheatType
+{
+    A,
+    B,
+    C,
+}

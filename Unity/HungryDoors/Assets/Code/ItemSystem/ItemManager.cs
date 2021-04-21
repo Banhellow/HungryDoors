@@ -54,6 +54,7 @@ public class ItemManager : MonoBehaviour
             int poolIndex = poolIndices.RandomElement();
             var item = items[index];
             item.data.relatedItem = pool[poolIndex];
+            item.data.maxDurability = 1;
             poolIndices.Remove(poolIndex);
             indices.Remove(index);
         }
