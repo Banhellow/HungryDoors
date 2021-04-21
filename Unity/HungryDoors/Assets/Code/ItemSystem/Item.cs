@@ -16,6 +16,7 @@ public class Item : MonoBehaviour, IUsable
     private GUIManager GUIManager;
     private ItemManager itemManager;
     private SoundManager soundManager;
+    private DoorController doorController;
     private bool _isInUsage = false;
     private bool _hasLanded = true;
     public bool isOwnByPlayer = false;
@@ -24,11 +25,12 @@ public class Item : MonoBehaviour, IUsable
     public bool isInUsage { get => _isInUsage; set => _isInUsage = value; }
 
     [Inject]
-    public void Init(GUIManager gui, ItemManager itemMan, SoundManager sound)
+    public void Init(GUIManager gui, ItemManager itemMan, SoundManager sound, DoorController controller)
     {
         GUIManager = gui;
         itemManager = itemMan;
         soundManager = sound;
+        doorController = controller;
     }
 
     private void Awake()
@@ -49,6 +51,16 @@ public class Item : MonoBehaviour, IUsable
             _hasLanded = true;
             Debug.Log("Collision detected: " + collision.gameObject);
             ChangeItemDurability(data.damage);
+            isInUsage = false;
+        }
+        else if(collision.gameObject.CompareTag(Tags.PICKUP_ITEM))
+        {
+            var item = collision.gameObject.GetComponent<Item>();
+            if(item.isInUsage)
+            {
+                isInUsage = false;
+                ChangeItemDurability(item.data.damage);
+            }
         }
     }
 
@@ -74,7 +86,7 @@ public class Item : MonoBehaviour, IUsable
         Vector3 lookAtDir = GetComponentInParent<PlayerController>().LookDirection;
         transform.SetParent(null);
         itemRB.AddForce(lookAtDir * force);
-        isInUsage = false;
+
         return null;
     }
     public virtual Item ChangeItemDurability(int changeValue)
@@ -130,6 +142,8 @@ public class Item : MonoBehaviour, IUsable
         transform.localScale = Vector3.one;
         transform.localRotation = Quaternion.identity;
         Destroy(pickupVisuals);
+        if (data.isQuestItem)
+            doorController.GiveCheat(data.level, data.cheatType);
         //Destroy(GetComponent<Rigidbody>());
         //Destroy(GetComponent<CapsuleCollider>());
         isInUsage = true;

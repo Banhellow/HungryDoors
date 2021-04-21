@@ -130,11 +130,17 @@ MonoBehaviour:
     weaponType: 0
     usageType: 1
     animationType: 0
+    sfx: 0
     damage: 5
     maxDurability: 999
     pushForce: 1000
     selfItem: {fileID: 0}
+    isQuestItem: 1
+    cheatType: 2
+    level: 1
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 8567788353506937891}
+  itemCollider: {fileID: 0}
   durability: 0
+  isOwnByPlayer: 0

@@ -67,14 +67,20 @@ MonoBehaviour:
     weaponType: 0
     usageType: 0
     animationType: 0
+    sfx: 0
     damage: 0
     maxDurability: 5
     pushForce: 1000
     selfItem: {fileID: 8134519426570011309}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 1223888087214729841}
+  itemCollider: {fileID: 0}
   durability: 0
+  isOwnByPlayer: 0
 --- !u!54 &1223888087214729841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -136,20 +142,6 @@ CapsuleCollider:
   m_Height: 0.07733204
   m_Direction: 1
   m_Center: {x: 0, y: 0.038666, z: 0.00000010430813}
---- !u!114 &3780459136896991902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4642137794807528345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7827ed6a38b282f4ab49d3825fdeafe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayersWeapon: 0
-  damage: 2
 --- !u!1001 &5525149744670164680
 PrefabInstance:
   m_ObjectHideFlags: 0

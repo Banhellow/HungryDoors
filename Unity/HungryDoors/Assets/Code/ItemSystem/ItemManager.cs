@@ -112,6 +112,7 @@ public class ItemManager : MonoBehaviour
                 items[i].itemRB = items[i].GetComponent<Rigidbody>();
                 unbindCounter++;
             }
+            items[i].itemCollider = items[i].GetComponent<Collider>();
 
         }
         Debug.Log("RigidBodies added: " + newRbCounter);

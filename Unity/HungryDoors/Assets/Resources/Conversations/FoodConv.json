@@ -10,8 +10,38 @@
     "isCorrect": true
   },
   {
-    "phrase": "Yeh,What a trash",
+    "phrase": "Ugh, disgusting!",
+    "type": 3,
+    "isCorrect": false
+  },
+  {
+    "phrase": "Excellent! I love chewing steel!",
+    "type": 0,
+    "isCorrect": true
+  },
+  {
+    "phrase": "Om nom nom! This is some delicious timber!",
     "type": 1,
+    "isCorrect": true
+  },
+  {
+    "phrase": "Yum! Now this is something I like!",
+    "type": 2,
+    "isCorrect": true
+  },
+  {
+    "phrase": "Ouch! You want me to break my teeth?",
+    "type": 0,
+    "isCorrect": false
+  },
+  {
+    "phrase": "Yuck! Splinters are disgusting!",
+    "type": 1,
+    "isCorrect": false
+  },
+  {
+    "phrase": "Ugh! You trying to poison me?",
+    "type": 2,
     "isCorrect": false
   }
 ]

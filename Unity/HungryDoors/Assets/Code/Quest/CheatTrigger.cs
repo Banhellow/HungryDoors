@@ -6,7 +6,7 @@ public class CheatTrigger : MonoBehaviour
 {
     public CheatType type;
     public int level;
-    Conversation conversation;
+    public DoorController door;
     void Start()
     {
     }
@@ -15,8 +15,15 @@ public class CheatTrigger : MonoBehaviour
     {
         if(other.CompareTag(Tags.PLAYER))
         {
-            
+            door.GiveCheat(level, type);
+        }
+    }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag(Tags.PLAYER))
+        {
+            door.GiveCheat(level, type);
         }
     }
 }

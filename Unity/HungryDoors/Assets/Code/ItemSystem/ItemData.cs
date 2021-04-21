@@ -25,4 +25,11 @@ public class ItemData
     public float pushForce = 1000f;
     public Item selfItem;
     public ItemData relatedItem;
+
+    [Header("Quest settings")]
+    public bool isQuestItem = false;
+    [ShowIf("isQuestItem")]
+    public CheatType cheatType;
+    [ShowIf("isQuestItem")]
+    public int level;
 }
