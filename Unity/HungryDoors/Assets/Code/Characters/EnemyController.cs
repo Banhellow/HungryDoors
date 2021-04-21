@@ -5,12 +5,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Zenject;
 
 public enum EnemyState { Idle, Patrol, Chase, Fight, Dead }
 
 public class EnemyController : Character
 {
     public EnemyState currentState;
+
+    [Inject]
+    ItemManager itemManager;
 
 
     [Header("Partol")]
@@ -32,6 +36,8 @@ public class EnemyController : Character
 
     public Item weapon;
 
+    [Header("Loot")]
+    public Item[] lootPrefabs;
 
     void Awake()
     {
@@ -63,18 +69,18 @@ public class EnemyController : Character
         {
             agent.updateRotation = true;
 
-            if(Time.timeSinceLevelLoad > lastAttackTime + attackDelay)
+            if (Time.timeSinceLevelLoad > lastAttackTime + attackDelay)
             {
                 Attack();
             }
 
-            if(agent.remainingDistance > movementMinDistance)
+            if (agent.remainingDistance > movementMinDistance)
             {
                 StartChaseState();
             }
         }
-        
-        
+
+
         if (agent.isStopped == false && agent.remainingDistance < movementMinDistance)
         {
             Debug.Log("3m dist");
@@ -82,7 +88,7 @@ public class EnemyController : Character
             {
                 StartIdleState();
             }
-            else if(currentState == EnemyState.Chase)
+            else if (currentState == EnemyState.Chase)
             {
                 StartFightState();
             }
@@ -198,6 +204,18 @@ public class EnemyController : Character
     {
         base.Die();
         StopAgentMovement();
+        SpawnLoot();
         Debug.Log($"Enemy {gameObject.name} dead.");
+    }
+
+    private void SpawnLoot()
+    {
+        for (int i = 0; i < lootPrefabs.Length; i++)
+        {
+            Item item = itemManager.InstantiateItem(lootPrefabs[i], transform.position, Quaternion.identity);
+            Vector3 dir = Quaternion.Euler(0, UnityEngine.Random.Range(0f, 360f), 0) * Vector3.forward;
+            dir.y = 1;
+            item.transform.DOJump(transform.position + dir.normalized, 1, 1, 1f, true).SetEase(Ease.OutQuad);
+        }
     }
 }

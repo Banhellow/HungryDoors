@@ -123,7 +123,6 @@ public class Item : MonoBehaviour, IUsable
     {
         Debug.Log($"OnPickup {this.name}");
         isOwnByPlayer = pickedUpByPlayer;
-        soundManager.PlaySfx(SFX.ItemPickup);
         itemRB.isKinematic = true;
         itemCollider.enabled = false;
         transform.SetParent(parentTR);
