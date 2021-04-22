@@ -56,7 +56,7 @@ public class EnemyController : Character
             return;
 
         agent.destination = movementGoal.position;
-
+        
         if (currentState == EnemyState.Idle)
         {
             idleTimer += Time.deltaTime;
@@ -80,10 +80,15 @@ public class EnemyController : Character
             }
         }
 
+        float dist = 0;
+        if (agent.pathPending)
+            dist = Vector3.Distance(transform.position, movementGoal.position);
+        else
+            dist = agent.remainingDistance;
 
-        if (agent.isStopped == false && agent.remainingDistance < movementMinDistance)
+        if (agent.isStopped == false && dist < movementMinDistance)
         {
-            Debug.Log("3m dist");
+            Debug.Log($"dist less than {movementMinDistance}m dist");
             if (currentState == EnemyState.Patrol)
             {
                 StartIdleState();
@@ -132,6 +137,15 @@ public class EnemyController : Character
             return;
 
         movementGoal = goalTR;
+
+        NavMeshPath path = new NavMeshPath();
+        agent.CalculatePath(goalTR.position, path);
+        if (path.status == NavMeshPathStatus.PathPartial)
+        {
+            Debug.LogError($"Wrong point - not on navmesh {goalTR.name} {goalTR.position}");
+        }
+
+        Debug.DrawLine(goalTR.position, goalTR.position + new Vector3(0, 2, 0), Color.green, 1f);
     }
 
     [Button]
@@ -202,6 +216,9 @@ public class EnemyController : Character
 
     public override void Die()
     {
+        if (isDead)
+            return;
+
         base.Die();
         StopAgentMovement();
         SpawnLoot();
@@ -210,6 +227,9 @@ public class EnemyController : Character
 
     private void SpawnLoot()
     {
+        if (lootPrefabs == null || lootPrefabs.Length < 1)
+            return;
+
         for (int i = 0; i < lootPrefabs.Length; i++)
         {
             Item item = itemManager.InstantiateItem(lootPrefabs[i], transform.position, Quaternion.identity);

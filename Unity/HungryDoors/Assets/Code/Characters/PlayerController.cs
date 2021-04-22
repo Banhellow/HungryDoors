@@ -46,7 +46,7 @@ public class PlayerController : Character
         myLifeController = GetComponent<LifeController>();
 
         mainCamera = Camera.main;
-        groundPlane = new Plane(Vector3.up, Vector3.zero);
+        groundPlane = new Plane(Vector3.up, Vector3.zero + new Vector3(0, transform.position.y, 0));
     }
 
     void Update()
