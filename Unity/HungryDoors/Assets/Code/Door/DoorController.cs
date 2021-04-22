@@ -8,11 +8,12 @@ public class DoorController : MonoBehaviour
 {
     [Inject]
     private GUIManager guiManager;
-    [ShowAssetPreview(64,64)]
+    [ShowAssetPreview(64, 64)]
     public Sprite doorImage;
     public FoodType preferedFoodType;
     public Conversation conversation;
     public Animator doorAnim;
+    public bool isDoorOpened = false;
 
     [Header("Spawn settings")]
 
@@ -74,10 +75,16 @@ public class DoorController : MonoBehaviour
                     break;
             }
         }
+        if(collision.CompareTag(Tags.PLAYER) && !isDoorOpened)
+        {
+            var player = collision.gameObject.GetComponent<LifeController>();
+            player.GetDamage(100);
+        }
     }
 
     public void OpenDoor()
     {
+        isDoorOpened = true;
         Debug.Log("You Win!");
     }
 

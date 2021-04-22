@@ -30,7 +30,6 @@ public class Weapon : Item
                     //items
                     if (item != null)
                     {
-                        item.itemRB.isKinematic = false;
                         item.itemRB.AddForce((item.transform.position - transform.position).normalized * bombForce);
                         item.ChangeItemDurability(data.damage);
 
@@ -41,7 +40,7 @@ public class Weapon : Item
                         enemies.GetDamage(data.damage);
                     }
                 }
-                ChangeItemDurability(1);
+                ChangeItemDurability(5);
             }
             else
             {
