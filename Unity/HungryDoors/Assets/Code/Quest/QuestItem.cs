@@ -5,6 +5,7 @@ using UnityEngine;
 public class QuestItem : MonoBehaviour
 {
     public FoodType targetType;
+    public ItemType targetItemType;
     public ItemData dropItem;
     public GameObject lastCollided;
     void Start()
