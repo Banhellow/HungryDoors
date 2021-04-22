@@ -512,7 +512,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   pickupSphereCenter: {fileID: 3047266785195675254}
-  pickupSphereRadius: 1
+  pickupSphereRadius: 1.5
   rightArmHandleTR: {fileID: 6847931134777701551}
 --- !u!114 &1967787577
 MonoBehaviour:
