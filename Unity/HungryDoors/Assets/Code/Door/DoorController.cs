@@ -21,12 +21,17 @@ public class DoorController : MonoBehaviour
     public int enemyCount;
     public int maxEnemyCount;
     public float spawnInterval;
+
     public GameObject enemyPrefab;
+    public GameObject enemyWithQuestItem;
+    public float enemyWithQuestItemProbability;
 
     private Coroutine spawnInProgress;
     void Start()
     {
         conversation = new Conversation();
+        string phrase = conversation.GetPhraseByWeaponType(WeaponType.shoot);
+        Debug.Log(phrase);
     }
 
 
@@ -103,7 +108,8 @@ public class DoorController : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        var enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        var prefab = Random.Range(0f, 1f) < enemyWithQuestItemProbability ? enemyWithQuestItem : enemyPrefab;
+        var enemy = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
         enemy.transform.DOMove(MoveToPoint.position, 0.5f);
         enemyCount++;
     }
