@@ -88,7 +88,7 @@ public class EnemyController : Character
 
         if (agent.isStopped == false && dist < movementMinDistance)
         {
-            Debug.Log($"dist less than {movementMinDistance}m dist");
+            //Debug.Log($"dist less than {movementMinDistance}m dist");
             if (currentState == EnemyState.Patrol)
             {
                 StartIdleState();
