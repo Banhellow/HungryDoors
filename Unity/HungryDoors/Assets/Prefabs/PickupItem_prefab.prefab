@@ -109,7 +109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &556928947
 Transform:
   m_ObjectHideFlags: 0
@@ -4920,7 +4920,7 @@ GameObject:
   - component: {fileID: 4216895447387924863}
   - component: {fileID: 4216895447387924861}
   - component: {fileID: 9077258298380621225}
-  - component: {fileID: 3125323425200694687}
+  - component: {fileID: -4858355716466127596}
   m_Layer: 8
   m_Name: PickupItem_prefab
   m_TagString: PickupItem
@@ -4974,7 +4974,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &3125323425200694687
+--- !u!114 &-4858355716466127596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4983,7 +4983,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4216895447387924834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f86e301716cbb446ba43662fb022e53, type: 3}
+  m_Script: {fileID: 11500000, guid: 8009a84658245444aa0f208f83b3326c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data:
@@ -4994,9 +4994,10 @@ MonoBehaviour:
     usageType: 0
     animationType: 0
     sfx: 0
-    destroyVFX: {fileID: 0}
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 20
+    damage: 10
     maxDurability: 10
     pushForce: 1000
     selfItem: {fileID: 0}
@@ -5004,11 +5005,17 @@ MonoBehaviour:
     cheatType: 0
     level: 0
   itemVFX: {fileID: 0}
-  pickupVisuals: {fileID: 556928946}
+  pickupVisuals: {fileID: 0}
   itemRB: {fileID: 4216895447387924861}
-  itemCollider: {fileID: 0}
+  itemCollider: {fileID: 9077258298380621225}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
+  meleeParticle: {fileID: 5456230281063597964}
+  projectilePrefab: {fileID: 0}
+  bombRadius: 0
+  bombForce: 0
 --- !u!1 &4216895447620696817
 GameObject:
   m_ObjectHideFlags: 0
@@ -5191,6 +5198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword_attack_vfx_prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1356215437866268017, guid: 7b8924fa927b19e4f961ccaa0cefc1fd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1356215437866268020, guid: 7b8924fa927b19e4f961ccaa0cefc1fd,
         type: 3}
       propertyPath: m_RootOrder
@@ -5251,6 +5263,12 @@ PrefabInstance:
 --- !u!4 &5456230281063597963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1356215437866268020, guid: 7b8924fa927b19e4f961ccaa0cefc1fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 6443052690786087679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5456230281063597964 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1356215437866268019, guid: 7b8924fa927b19e4f961ccaa0cefc1fd,
     type: 3}
   m_PrefabInstance: {fileID: 6443052690786087679}
   m_PrefabAsset: {fileID: 0}

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -314,6 +314,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &10022600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -790,6 +791,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &17085003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -962,6 +964,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &20656008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2684,6 +2687,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &79379370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2982,6 +2986,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &87556958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3521,6 +3526,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &93511762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,6 +3776,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &110040025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4472,6 +4479,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &133951810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4820,6 +4828,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &144758960 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b0ddf0273b34b414bb6ffa4bbccd6d89,
@@ -7137,6 +7146,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &252313448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8128,6 +8138,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &289304104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8526,6 +8537,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &305815690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9278,6 +9290,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &344991390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10880,6 +10893,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &396774063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11376,6 +11390,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &415444894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13538,6 +13553,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &504401420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14054,6 +14070,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &524916824 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9a363f4f50ca88849aed1968013aafa7,
@@ -14662,6 +14679,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &571561281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15880,6 +15898,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &648441630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16177,6 +16196,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &655318563
 GameObject:
   m_ObjectHideFlags: 0
@@ -16455,6 +16475,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &683515124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17902,6 +17923,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &714791277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18219,6 +18241,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &724869060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19808,6 +19831,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &774867123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20080,6 +20104,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &777687156
 GameObject:
   m_ObjectHideFlags: 0
@@ -21018,6 +21043,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &829148764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22572,6 +22598,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &890864673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23172,6 +23199,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &911017956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23449,6 +23477,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &912630799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23612,6 +23641,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &913227567
 GameObject:
   m_ObjectHideFlags: 0
@@ -25225,6 +25255,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &989066348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25393,6 +25424,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!4 &990156780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae619a5a29b230b4cb4ee9f6887ae371,
@@ -26941,6 +26973,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!4 &1095369540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a6d080609302bc540bd7e7b6a4b9a3ae,
@@ -27125,6 +27158,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &1098761382
 GameObject:
   m_ObjectHideFlags: 0
@@ -28118,6 +28152,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1132816398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28291,6 +28326,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &1144347429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 686be202d98d5284d85874b7bff57361,
@@ -28602,6 +28638,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1152656187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29129,6 +29166,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1159900996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29979,6 +30017,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1171785211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30592,6 +30631,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1205320534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31333,6 +31373,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1234820092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31829,6 +31870,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1258497365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32665,6 +32707,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1285570813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32828,6 +32871,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1290875119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33229,6 +33273,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &1293885939
 GameObject:
   m_ObjectHideFlags: 0
@@ -33475,6 +33520,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &1302621436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b0ddf0273b34b414bb6ffa4bbccd6d89,
@@ -34123,6 +34169,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1349660135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35562,6 +35609,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &1413380109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b0ddf0273b34b414bb6ffa4bbccd6d89,
@@ -36215,6 +36263,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1439294315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36910,6 +36959,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1474781335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37306,6 +37356,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1490087661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38808,6 +38859,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1557065289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38997,6 +39049,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1564140077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41898,6 +41951,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1677104911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42861,6 +42915,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1724514781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43018,6 +43073,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1725546827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43784,6 +43840,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1749348038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44216,6 +44273,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1764131441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44479,6 +44537,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1772887282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44647,6 +44706,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1773658843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44910,6 +44970,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &1775414085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 17a2da430a8bc43458971fe31086a574,
@@ -46335,6 +46396,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1835581680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46690,6 +46752,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1851155825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47659,6 +47722,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1880242821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48397,6 +48461,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1905069031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48575,6 +48640,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &1905410254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48833,6 +48899,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &1913308028
 GameObject:
   m_ObjectHideFlags: 0
@@ -48945,87 +49012,362 @@ MonoBehaviour:
   - {fileID: 1671506187}
   - {fileID: 1939911127}
   weaponPool:
-  - icon: {fileID: 8545975522788285384, guid: 3ef72418ac221de48b71f9651931b291, type: 3}
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
     type: 2
     foodType: 0
     weaponType: 0
     usageType: 0
     animationType: 0
     sfx: 0
-    destroyVFX: {fileID: 0}
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
     useVFX: {fileID: 0}
     damage: 20
     maxDurability: 10
     pushForce: 0
-    selfItem: {fileID: 5644729718689252576, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
       type: 3}
     isQuestItem: 0
     cheatType: 0
     level: 0
-  - icon: {fileID: 8545975522788285384, guid: 3ef72418ac221de48b71f9651931b291, type: 3}
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
     type: 2
     foodType: 0
     weaponType: 0
     usageType: 0
     animationType: 0
     sfx: 0
-    destroyVFX: {fileID: 0}
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
     useVFX: {fileID: 0}
     damage: 20
     maxDurability: 10
     pushForce: 0
-    selfItem: {fileID: 5644729718689252576, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
       type: 3}
     isQuestItem: 0
     cheatType: 0
     level: 0
-  - icon: {fileID: 8545975522788285384, guid: 3ef72418ac221de48b71f9651931b291, type: 3}
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
     type: 2
     foodType: 0
     weaponType: 0
     usageType: 0
     animationType: 0
     sfx: 0
-    destroyVFX: {fileID: 0}
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
     useVFX: {fileID: 0}
     damage: 20
     maxDurability: 10
     pushForce: 0
-    selfItem: {fileID: 5644729718689252576, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
       type: 3}
     isQuestItem: 0
     cheatType: 0
     level: 0
-  - icon: {fileID: 8545975522788285384, guid: 3ef72418ac221de48b71f9651931b291, type: 3}
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
     type: 2
     foodType: 0
     weaponType: 0
     usageType: 0
     animationType: 0
     sfx: 0
-    destroyVFX: {fileID: 0}
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
     useVFX: {fileID: 0}
     damage: 20
     maxDurability: 10
     pushForce: 0
-    selfItem: {fileID: 5644729718689252576, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
       type: 3}
     isQuestItem: 0
     cheatType: 0
     level: 0
-  - icon: {fileID: 8545975522788285384, guid: 3ef72418ac221de48b71f9651931b291, type: 3}
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
     type: 2
     foodType: 0
     weaponType: 0
     usageType: 0
     animationType: 0
     sfx: 0
-    destroyVFX: {fileID: 0}
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
     useVFX: {fileID: 0}
     damage: 20
     maxDurability: 10
     pushForce: 0
-    selfItem: {fileID: 5644729718689252576, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 739541530909815633, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
+    type: 2
+    foodType: 0
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 3239666934335628279, guid: c9a26528b0ed9014fb9cbcaa75ad61e5,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 20
+    maxDurability: 10
+    pushForce: 0
+    selfItem: {fileID: -4858355716466127596, guid: 2c6c8567c3e2aad41bed6f27e810f754,
       type: 3}
     isQuestItem: 0
     cheatType: 0
@@ -49112,6 +49454,125 @@ MonoBehaviour:
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 2
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
+    damage: 5
+    maxDurability: 2
+    pushForce: 1000
+    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 2
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
+    damage: 5
+    maxDurability: 2
+    pushForce: 1000
+    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 2
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
+    damage: 5
+    maxDurability: 2
+    pushForce: 1000
+    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 2
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
+    damage: 5
+    maxDurability: 2
+    pushForce: 1000
+    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 2
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
+    damage: 5
+    maxDurability: 2
+    pushForce: 1000
+    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 2
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
+    damage: 5
+    maxDurability: 2
+    pushForce: 1000
+    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: 0}
+    type: 0
+    foodType: 2
+    weaponType: 0
+    usageType: 0
+    animationType: 0
+    sfx: 0
+    destroyVFX: {fileID: 0}
+    useVFX: {fileID: 0}
+    damage: 5
+    maxDurability: 2
+    pushForce: 1000
+    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
       type: 3}
     isQuestItem: 0
     cheatType: 0
@@ -49979,6 +50440,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!54 &1939911128
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -50592,6 +51054,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &1974010496
 GameObject:
   m_ObjectHideFlags: 0
@@ -51920,9 +52383,10 @@ MonoBehaviour:
   enemyCount: 0
   maxEnemyCount: 5
   spawnInterval: 1
-  enemyPrefab: {fileID: 8326392303557715337, guid: c417b19e9d0ab104d9bf896650f17204,
+  enemyPrefab: {fileID: 8326392303557715337, guid: 40cfb4efd1da94d499ca842267fe2a4f,
     type: 3}
-  enemyWithQuestItem: {fileID: 0}
+  enemyWithQuestItem: {fileID: 8326392303557715337, guid: 40cfb4efd1da94d499ca842267fe2a4f,
+    type: 3}
   enemyWithQuestItemProbability: 0
 --- !u!1 &2007087430 stripped
 GameObject:
@@ -52274,6 +52738,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &2016607238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52795,6 +53260,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &2028624738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53168,6 +53634,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &2040899936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ecec866a0d419f449cc232b6d2a8672,
@@ -53349,6 +53816,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &2059041129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b0ddf0273b34b414bb6ffa4bbccd6d89,
@@ -53442,6 +53910,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &2061924275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53714,6 +54183,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &2065622537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54160,6 +54630,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &2078897198 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0b38a1af47c926b489b91a84db98df89,
@@ -54932,6 +55403,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &2109388714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55105,6 +55577,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &2109649052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55268,6 +55741,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &2110602354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55641,6 +56115,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &2140901274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55814,6 +56289,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1001 &2143092359
 PrefabInstance:
   m_ObjectHideFlags: 0

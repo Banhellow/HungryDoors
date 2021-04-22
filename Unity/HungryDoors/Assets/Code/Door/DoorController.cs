@@ -4,6 +4,7 @@ using UnityEngine;
 using Zenject;
 using NaughtyAttributes;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 public class DoorController : MonoBehaviour
 {
     [Inject]
@@ -46,7 +47,7 @@ public class DoorController : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.tag == Tags.PICKUP_ITEM)
+        if (collision.tag == Tags.PICKUP_ITEM)
         {
             var item = collision.GetComponentInParent<Item>();
             string phrase;
@@ -79,10 +80,14 @@ public class DoorController : MonoBehaviour
                     break;
             }
         }
-        if(collision.CompareTag(Tags.PLAYER) && !isDoorOpened)
+        if (collision.CompareTag(Tags.PLAYER) && !isDoorOpened)
         {
             var player = collision.gameObject.GetComponent<LifeController>();
             player.GetDamage(100);
+        }
+        else if (collision.CompareTag(Tags.PLAYER) && isDoorOpened)
+        {
+            SceneManager.LoadScene("StartMenu");
         }
     }
 

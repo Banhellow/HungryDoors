@@ -396,6 +396,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!1 &1915028486309326494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1047,7 @@ GameObject:
   - component: {fileID: 8326392303557715336}
   - component: {fileID: 8326392303557715342}
   m_Layer: 0
-  m_Name: Skeleton_prefab
+  m_Name: SkeletonWithBomb
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1095,7 +1096,7 @@ MonoBehaviour:
   attackDelay: 3
   weapon: {fileID: 8466102981920656639}
   lootPrefabs:
-  - {fileID: 3125323425200694687, guid: 2c6c8567c3e2aad41bed6f27e810f754, type: 3}
+  - {fileID: 8597758974183617448, guid: 633c367737691334fbb334ee7d096ef9, type: 3}
 --- !u!114 &8326392303557715341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,7 +1109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 672ee91cc6e510f489e4b89dea0f999f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 100
+  startHealth: 20
   currentHealth: 100
   myCharacter: {fileID: 0}
   lifeFillImage: {fileID: 4019500654936650098}

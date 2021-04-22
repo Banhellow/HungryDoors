@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using NaughtyAttributes;
+using DG.Tweening;
 using Zenject;
 public class Item : MonoBehaviour, IUsable
 {
@@ -20,7 +21,7 @@ public class Item : MonoBehaviour, IUsable
     private bool _isInUsage = false;
     public bool _hasLanded = true;
     public bool isOwnByPlayer = false;
-
+    public bool _isUsed;
 
     public bool isInUsage { get => _isInUsage; set => _isInUsage = value; }
 
@@ -53,7 +54,7 @@ public class Item : MonoBehaviour, IUsable
             ChangeItemDurability(data.damage);
             isInUsage = false;
         }
-        else if(collision.gameObject.CompareTag(Tags.PICKUP_ITEM))
+        else if(collision.gameObject.CompareTag(Tags.PICKUP_ITEM) && _isUsed)
         {
             var item = collision.gameObject.GetComponent<Item>();
             if(item.isInUsage)
@@ -72,6 +73,8 @@ public class Item : MonoBehaviour, IUsable
         }
         else
         {
+            _isUsed = true;
+            DOVirtual.DelayedCall(0.2f, ()=> _isUsed = false);
             return ChangeItemDurability(1);
         }
 

@@ -110,9 +110,9 @@ MonoBehaviour:
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 0}
-    isQuestItem: 0
-    cheatType: 0
-    level: 0
+    isQuestItem: 1
+    cheatType: 1
+    level: 2
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 4250313695380150997}
@@ -120,6 +120,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
   meleeParticle: {fileID: 0}
   projectilePrefab: {fileID: 0}
   bombRadius: 5
