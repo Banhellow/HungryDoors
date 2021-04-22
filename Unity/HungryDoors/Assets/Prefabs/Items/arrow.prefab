@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3842708872291567012}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 10.25335, y: 19.883072, z: 24.169436}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &698058379264856251
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -100,9 +100,9 @@ MonoBehaviour:
     icon: {fileID: 0}
     type: 2
     foodType: 0
-    weaponType: 2
+    weaponType: 1
     usageType: 1
-    animationType: 0
+    animationType: 1
     sfx: 9
     destroyVFX: {fileID: 2418122892153017133, guid: 426681e9ccb155d45913a1255ea78348,
       type: 3}
@@ -121,6 +121,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
 --- !u!54 &4149330993584765168
 Rigidbody:
   m_ObjectHideFlags: 0
