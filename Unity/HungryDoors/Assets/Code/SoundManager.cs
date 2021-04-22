@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SFX { SwordAttack, AxeAttack, Damage, Throw, Eating, ItemDrop, Death, ItemPickup, CrossbowAtack, ItemHit, ItemBreaks }
+public enum SFX { SwordAttack, AxeAttack, Damage, Throw, Eating, ItemDrop, Death, ItemPickup, CrossbowAtack, ItemHit, ItemBreaks, DoorEating, Explosion }
 
 [Serializable]
 public struct SfxData

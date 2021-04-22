@@ -20117,11 +20117,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1913308030}
     m_Modifications:
-    - target: {fileID: 2881044707772575199, guid: bd304849aa408dd4283303189fe3dde0,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: e5dca387d3c738643b6af87e9df227f6, type: 3}
     - target: {fileID: 2881044708193374230, guid: bd304849aa408dd4283303189fe3dde0,
         type: 3}
       propertyPath: m_RootOrder
@@ -48800,7 +48795,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1913308030}
   - component: {fileID: 1913308029}
-  - component: {fileID: 1913308031}
   m_Layer: 8
   m_Name: ---Managers
   m_TagString: PickupItem
@@ -49338,24 +49332,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1913308031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913308028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7817985fd3c12e24a8a655529fa98ae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicAS: {fileID: 0}
-  musicIsOn: 1
-  MusicClip: {fileID: 0}
-  sfxAS: {fileID: 0}
-  sfxIsOn: 1
-  sfxClipList: []
 --- !u!1001 &1914640448
 PrefabInstance:
   m_ObjectHideFlags: 0
