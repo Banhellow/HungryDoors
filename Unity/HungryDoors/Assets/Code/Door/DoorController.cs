@@ -89,6 +89,7 @@ public class DoorController : MonoBehaviour
     public void OpenDoor()
     {
         isDoorOpened = true;
+        soundManager.PlaySfxWithDelay(SFX.OpenDoor, 3.4f);
         Debug.Log("You Win!");
     }
 
@@ -123,6 +124,15 @@ public class DoorController : MonoBehaviour
         var enemy = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
         enemy.transform.DOMove(MoveToPoint.position, 0.5f);
         enemyCount++;
+    }
+
+    [Button]
+    private void DEV_OpenDoor()
+    {
+        doorAnim.SetTrigger("Eat");
+        soundManager.PlaySfx(SFX.DoorEating);
+        doorAnim.SetBool("IsGoodFood", true);
+        OpenDoor();
     }
 }
 
