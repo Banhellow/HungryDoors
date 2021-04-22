@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 using NaughtyAttributes;
-
+using DG.Tweening;
 public class DoorController : MonoBehaviour
 {
     [Inject]
@@ -12,11 +12,21 @@ public class DoorController : MonoBehaviour
     public Sprite doorImage;
     public FoodType preferedFoodType;
     public Conversation conversation;
+    public Animator doorAnim;
+
+    [Header("Spawn settings")]
+
+    public Transform spawnPoint;
+    public Transform MoveToPoint;
+    public int enemyCount;
+    public int maxEnemyCount;
+    public float spawnInterval;
+    public GameObject enemyPrefab;
+
+    private Coroutine spawnInProgress;
     void Start()
     {
         conversation = new Conversation();
-        string cheat = conversation.GetCheatByHintAndLevel(1,"A");
-        Debug.Log(cheat);
     }
 
 
@@ -31,6 +41,7 @@ public class DoorController : MonoBehaviour
         {
             var item = collision.GetComponentInParent<Item>();
             string phrase;
+            doorAnim.SetTrigger("Eat");
             switch (item.data.type)
             {
                 case ItemType.Food:
@@ -38,12 +49,22 @@ public class DoorController : MonoBehaviour
                     phrase = conversation.GetPhraseByFoodType(item.data.foodType,
                         isCorrect);
                     guiManager.ShowDialogBox(doorImage, phrase, 2f);
-                    if (isCorrect) OpenDoor();
-                    else SpawnEnemies();
+                    if (isCorrect)
+                    {
+                        doorAnim.SetBool("IsGoodFood", true);
+                        OpenDoor();
+                    }
+                    else
+                    {
+                        SpawnEnemies();
+                        doorAnim.SetBool("IsGoodFood", false);
+                    }
+
                     break;
                 case ItemType.Weapon:
                     phrase = conversation.GetPhraseByWeaponType(item.data.weaponType);
                     guiManager.ShowDialogBox(doorImage, phrase, 2f);
+                    doorAnim.SetTrigger("Talk");
                     SpawnEnemies();
                     break;
             }
@@ -52,12 +73,39 @@ public class DoorController : MonoBehaviour
 
     public void OpenDoor()
     {
-        gameObject.SetActive(false);
+        Debug.Log("You Win!");
+    }
+
+    public void GiveCheat(int level, CheatType type)
+    {
+        string phrase = conversation.GetCheatByHintAndLevel(level, type.ToString());
+        doorAnim.SetTrigger("Talk");
+        guiManager.ShowDialogBox(doorImage, phrase, 2f);
     }
 
     public void SpawnEnemies()
     {
-        Debug.Log("Fail! Spawn more enemies");
+        if(spawnInProgress != null)
+        {
+            maxEnemyCount += 5;
+            return;
+        }
+        spawnInProgress = StartCoroutine(SpawnCoroutine());
+    }
+
+    IEnumerator SpawnCoroutine()
+    {
+        yield return new WaitUntil(() => enemyCount == maxEnemyCount);
+        doorAnim.SetTrigger("EnemySpawned");
+        enemyCount = 0;
+        spawnInProgress = null;
+    }
+
+    public void SpawnEnemy()
+    {
+        var enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        enemy.transform.DOMove(MoveToPoint.position, 0.5f);
+        enemyCount++;
     }
 }
 

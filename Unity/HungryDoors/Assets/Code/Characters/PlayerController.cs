@@ -1,4 +1,5 @@
-﻿using NaughtyAttributes;
+﻿using DG.Tweening;
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ public class PlayerController : Character
     private Plane groundPlane;
     private Vector3 lookAtPosition;
 
-    public Vector3 LookDirection { get => (lookAtPosition - transform.position).normalized;  }
+    public Vector3 LookDirection { get => (lookAtPosition - transform.position).normalized; }
 
 
 
@@ -50,7 +51,7 @@ public class PlayerController : Character
 
     void Update()
     {
-        if (isDead) 
+        if (isDead)
             return;
 
         ReadInput();
@@ -101,6 +102,8 @@ public class PlayerController : Character
             switch (currentItem.data.animationType)
             {
                 case AnimationType.attack:
+                    currentItem.itemCollider.enabled = true;
+                    DOVirtual.DelayedCall(0.6f, () => currentItem.itemCollider.enabled = false);
                     animator.SetTrigger(attackParam);
                     break;
                 case AnimationType.shoot:
@@ -125,8 +128,8 @@ public class PlayerController : Character
                 {
                     rightArmHandleTR.BB_DestroyAllChildren();
                     currentItem = item;
-                    item.OnPickup(rightArmHandleTR);
-                     item.gameObject.GetComponent<DamageCollider>().OnPickupByPlayer();
+                    soundManager.PlaySfx(SFX.ItemPickup);
+                    item.OnPickup(rightArmHandleTR, true);
                     guiManager.UpdatePlayerItem(item);
                     return;
                 }
@@ -153,6 +156,7 @@ public class PlayerController : Character
     {
         base.Die();
         Debug.Log($"Player dead.");
+        DOVirtual.DelayedCall(1, () => guiManager.OnGameOver());
     }
 
 

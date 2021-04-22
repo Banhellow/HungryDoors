@@ -9,18 +9,18 @@ public class Food : Item
     {
         data.type = ItemType.Food;
     }
-    public override Item ChangeItemDurability()
+    public override Item ChangeItemDurability(int value)
     {
         if (durability >= data.maxDurability)
             Destroy(gameObject);
         else
-            durability++;
+            durability+= value;
         return this;
     }
     public override Item Use()
     {
         ThrowItem(data.pushForce);
-        return ChangeItemDurability();
+        return ChangeItemDurability(1);
         //base.Use();
     }
 }

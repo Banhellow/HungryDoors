@@ -1,15 +1,20 @@
-﻿using NaughtyAttributes;
+﻿using DG.Tweening;
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Zenject;
 
 public enum EnemyState { Idle, Patrol, Chase, Fight, Dead }
 
 public class EnemyController : Character
 {
     public EnemyState currentState;
+
+    [Inject]
+    ItemManager itemManager;
 
 
     [Header("Partol")]
@@ -29,11 +34,17 @@ public class EnemyController : Character
     public float attackDelay = 3;
     private float lastAttackTime = 0;
 
+    public Item weapon;
+
+    [Header("Loot")]
+    public Item[] lootPrefabs;
 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         movementMinDistance = agent.stoppingDistance;
+
+        weapon.isInUsage = true;
 
         if (currentState == EnemyState.Patrol)
             SetMovementGoal(partolPoints[currentPartolPoint % partolPoints.Count]);
@@ -41,6 +52,9 @@ public class EnemyController : Character
 
     void Update()
     {
+        if (isDead)
+            return;
+
         agent.destination = movementGoal.position;
 
         if (currentState == EnemyState.Idle)
@@ -55,18 +69,18 @@ public class EnemyController : Character
         {
             agent.updateRotation = true;
 
-            if(Time.timeSinceLevelLoad > lastAttackTime + attackDelay)
+            if (Time.timeSinceLevelLoad > lastAttackTime + attackDelay)
             {
                 Attack();
             }
 
-            if(agent.remainingDistance > movementMinDistance)
+            if (agent.remainingDistance > movementMinDistance)
             {
                 StartChaseState();
             }
         }
-        
-        
+
+
         if (agent.isStopped == false && agent.remainingDistance < movementMinDistance)
         {
             Debug.Log("3m dist");
@@ -74,7 +88,7 @@ public class EnemyController : Character
             {
                 StartIdleState();
             }
-            else if(currentState == EnemyState.Chase)
+            else if (currentState == EnemyState.Chase)
             {
                 StartFightState();
             }
@@ -171,9 +185,10 @@ public class EnemyController : Character
     private void Attack()
     {
         Debug.Log("Attack");
+        weapon.itemCollider.enabled = true;
+        DOVirtual.DelayedCall(0.6f, () => weapon.itemCollider.enabled = false);
         animator.SetTrigger(attackParam);
         lastAttackTime = Time.timeSinceLevelLoad;
-        
     }
 
     #endregion Attack
@@ -188,6 +203,19 @@ public class EnemyController : Character
     public override void Die()
     {
         base.Die();
+        StopAgentMovement();
+        SpawnLoot();
         Debug.Log($"Enemy {gameObject.name} dead.");
+    }
+
+    private void SpawnLoot()
+    {
+        for (int i = 0; i < lootPrefabs.Length; i++)
+        {
+            Item item = itemManager.InstantiateItem(lootPrefabs[i], transform.position, Quaternion.identity);
+            Vector3 dir = Quaternion.Euler(0, UnityEngine.Random.Range(0f, 360f), 0) * Vector3.forward;
+            dir.y = 1;
+            item.transform.DOJump(transform.position + dir.normalized, 1, 1, 1f, true).SetEase(Ease.OutQuad);
+        }
     }
 }

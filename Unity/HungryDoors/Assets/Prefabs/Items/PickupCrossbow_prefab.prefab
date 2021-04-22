@@ -47,21 +47,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    icon: {fileID: 0}
+    icon: {fileID: 5193404582128256025, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
     type: 2
     foodType: 0
     weaponType: 1
     usageType: 0
     animationType: 1
+    sfx: 8
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
     damage: 0
     maxDurability: 5
     pushForce: 1000
     selfItem: {fileID: 4059406043170351024}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
   itemVFX: {fileID: 0}
   pickupVisuals: {fileID: 0}
   itemRB: {fileID: 621364154442004567}
+  itemCollider: {fileID: 0}
   durability: 0
-  shootParticle: {fileID: 0}
+  _hasLanded: 1
+  isOwnByPlayer: 0
+  useParticle: {fileID: 0}
+  projectilePrefab: {fileID: 4149330993584765169, guid: 5c4950fcb44e4fe40ac8694fe05c7650,
+    type: 3}
 --- !u!136 &-6275813386460146691
 CapsuleCollider:
   m_ObjectHideFlags: 0
