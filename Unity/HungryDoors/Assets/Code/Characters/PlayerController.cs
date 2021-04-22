@@ -154,6 +154,9 @@ public class PlayerController : Character
 
     public override void Die()
     {
+        if (isDead)
+            return;
+
         base.Die();
         Debug.Log($"Player dead.");
         DOVirtual.DelayedCall(1, () => guiManager.OnGameOver());

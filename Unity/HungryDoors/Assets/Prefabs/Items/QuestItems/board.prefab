@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    icon: {fileID: 6531174680928083734, guid: 3ef72418ac221de48b71f9651931b291, type: 3}
+    icon: {fileID: -5937112900414138070, guid: 17e28c3aea529c04481a9e5ba4f48502, type: 3}
     type: 0
     foodType: 1
     weaponType: 0
@@ -146,4 +146,5 @@ MonoBehaviour:
   itemRB: {fileID: 8567788353506937891}
   itemCollider: {fileID: 0}
   durability: 0
+  _hasLanded: 1
   isOwnByPlayer: 0

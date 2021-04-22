@@ -150,6 +150,7 @@ public class GUIManager : MonoBehaviour
     [Button]
     public void OnGameOver()
     {
+        Debug.Log("OnGameOver");
         gameoverCG.DOFade(1, 2f).OnComplete(() => gameoverTextCG.DOFade(0, 0.9f));
         DOVirtual.DelayedCall(3, () => { SceneManager.LoadScene(0); });
     }
