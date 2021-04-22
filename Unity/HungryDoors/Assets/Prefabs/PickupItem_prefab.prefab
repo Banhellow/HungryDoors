@@ -4998,7 +4998,7 @@ MonoBehaviour:
       type: 3}
     useVFX: {fileID: 0}
     damage: 10
-    maxDurability: 5
+    maxDurability: 10
     pushForce: 1000
     selfItem: {fileID: 0}
     isQuestItem: 0
@@ -5011,6 +5011,7 @@ MonoBehaviour:
   durability: 0
   _hasLanded: 1
   isOwnByPlayer: 0
+  _isUsed: 0
   meleeParticle: {fileID: 5456230281063597964}
   projectilePrefab: {fileID: 0}
   bombRadius: 0
