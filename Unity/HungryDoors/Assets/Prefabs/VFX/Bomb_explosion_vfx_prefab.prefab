@@ -4823,6 +4823,8 @@ GameObject:
   - component: {fileID: 7773406075718265722}
   - component: {fileID: 601807964368205101}
   - component: {fileID: 6762657713590091430}
+  - component: {fileID: 8764354604746332690}
+  - component: {fileID: 7502994502118520292}
   m_Layer: 0
   m_Name: Bomb_explosion_vfx_prefab
   m_TagString: Untagged
@@ -9634,6 +9636,33 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &8764354604746332690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2426016631413979811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bbee840c7987a4bb20eadbce6af31e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: 12
+  soundManager: {fileID: 0}
+--- !u!114 &7502994502118520292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2426016631413979811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717a02054ef2699498e6bd4234fd7995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _containerSource: 0
 --- !u!1 &2528786624699583305
 GameObject:
   m_ObjectHideFlags: 0

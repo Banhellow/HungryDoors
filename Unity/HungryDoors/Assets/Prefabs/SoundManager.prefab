@@ -168,7 +168,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 447bb86224adb9b44a8331e66ff5af8a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicAS: {fileID: 2881044707772575199}
   musicIsOn: 1
-  MusicClip: {fileID: 8300000, guid: e5dca387d3c738643b6af87e9df227f6, type: 3}
+  MusicClip: {fileID: 8300000, guid: 447bb86224adb9b44a8331e66ff5af8a, type: 3}
   sfxAS: {fileID: 2881044707404819393}
   sfxIsOn: 1
   sfxClipList:
@@ -337,3 +337,9 @@ MonoBehaviour:
   - sfx: 10
     clips:
     - {fileID: 8300000, guid: 09bda3250b28fda41a20ea763670678f, type: 3}
+  - sfx: 11
+    clips:
+    - {fileID: 8300000, guid: c1695de15f81d2948b69ac5f85da9422, type: 3}
+  - sfx: 12
+    clips:
+    - {fileID: 8300000, guid: 9e17de01f8b2b2849a4ea3818dd2a7a2, type: 3}

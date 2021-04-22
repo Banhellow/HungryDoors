@@ -8,6 +8,9 @@ public class DoorController : MonoBehaviour
 {
     [Inject]
     private GUIManager guiManager;
+    [Inject]
+    private SoundManager soundManager;
+
     [ShowAssetPreview(64, 64)]
     public Sprite doorImage;
     public FoodType preferedFoodType;
@@ -48,6 +51,7 @@ public class DoorController : MonoBehaviour
             var item = collision.GetComponentInParent<Item>();
             string phrase;
             doorAnim.SetTrigger("Eat");
+            soundManager.PlaySfx(SFX.DoorEating);
             switch (item.data.type)
             {
                 case ItemType.Food:
