@@ -20,6 +20,7 @@ public class MenuController : MonoBehaviour
 
     public void OnLevelClick(int levelIndex)
     {
+        Debug.Log($"OnLevelClick {levelIndex}");
         SceneManager.LoadScene(levelIndex);
     }
 
