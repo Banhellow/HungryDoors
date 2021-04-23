@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2849406, g: 0.3713998, b: 0.49681896, a: 1}
+  m_IndirectSpecularColor: {r: 0.2849396, g: 0.3713986, b: 0.4968177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7908,10 +7908,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2543394778021140951, guid: 793bbcd811d269b4e929aaaddd486a57,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 317978608}
+    - target: {fileID: 2543394778021140951, guid: 793bbcd811d269b4e929aaaddd486a57,
+        type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 8326392303557715337, guid: 40cfb4efd1da94d499ca842267fe2a4f,
+      objectReference: {fileID: 393477863249543051, guid: f61957d80887b1449a2033aa69cf7af9,
         type: 3}
+    - target: {fileID: 2543394778021140951, guid: 793bbcd811d269b4e929aaaddd486a57,
+        type: 3}
+      propertyPath: maxEnemyCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2543394778021140951, guid: 793bbcd811d269b4e929aaaddd486a57,
         type: 3}
       propertyPath: preferedFoodType
@@ -7923,6 +7933,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8326392303557715337, guid: c417b19e9d0ab104d9bf896650f17204,
         type: 3}
+    - target: {fileID: 2543394778021140951, guid: 793bbcd811d269b4e929aaaddd486a57,
+        type: 3}
+      propertyPath: enemyWithQuestItemProbability
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2543394778021140956, guid: 793bbcd811d269b4e929aaaddd486a57,
         type: 3}
       propertyPath: m_Name
@@ -21013,7 +21028,7 @@ MonoBehaviour:
   BricksCount: 20
   brickPrefab: {fileID: 2843601760557656872, guid: 090fae2b93ba9e2469c3a866f6f95c08,
     type: 3}
-  explosionForce: 200
+  explosionForce: 10
 --- !u!1001 &504852019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41083,7 +41098,7 @@ MonoBehaviour:
   _guiManager: {fileID: 3322323}
   _itemManager: {fileID: 1444635805}
   _soundManager: {fileID: 1702517736}
-  _doorController: {fileID: 0}
+  _doorController: {fileID: 1458512230}
 --- !u!21 &980562348
 Material:
   serializedVersion: 6
@@ -51294,7 +51309,7 @@ MonoBehaviour:
   BricksCount: 20
   brickPrefab: {fileID: 2843601760557656872, guid: 090fae2b93ba9e2469c3a866f6f95c08,
     type: 3}
-  explosionForce: 200
+  explosionForce: 10
 --- !u!1001 &1178172578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66143,10 +66158,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
@@ -66160,10 +66176,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
@@ -66177,10 +66194,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
@@ -66194,10 +66212,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
@@ -66211,10 +66230,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
@@ -66228,10 +66248,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
@@ -66245,10 +66266,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
@@ -66262,10 +66284,83 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
+    maxDurability: 1
+    pushForce: 1000
+    selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
+    type: 0
+    foodType: 2
+    weaponType: 1
+    usageType: 1
+    animationType: 0
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 3
+    maxDurability: 1
+    pushForce: 1000
+    selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
+    type: 0
+    foodType: 2
+    weaponType: 1
+    usageType: 1
+    animationType: 0
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 3
+    maxDurability: 1
+    pushForce: 1000
+    selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
+    type: 0
+    foodType: 2
+    weaponType: 1
+    usageType: 1
+    animationType: 0
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 3
+    maxDurability: 1
+    pushForce: 1000
+    selfItem: {fileID: 6013633840701676314, guid: be44eb46f7972324f8776e8b3070d44c,
+      type: 3}
+    isQuestItem: 0
+    cheatType: 0
+    level: 0
+  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
+    type: 0
+    foodType: 2
+    weaponType: 1
+    usageType: 1
+    animationType: 0
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
+    useVFX: {fileID: 0}
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
@@ -66279,10 +66374,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
@@ -66296,10 +66392,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
@@ -66313,10 +66410,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
@@ -66330,10 +66428,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
@@ -66347,10 +66446,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
@@ -66364,10 +66464,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
@@ -66381,10 +66482,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
@@ -66398,78 +66500,11 @@ MonoBehaviour:
     weaponType: 1
     usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
-    useVFX: {fileID: 0}
-    damage: 2
-    maxDurability: 1
-    pushForce: 1000
-    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
       type: 3}
-    isQuestItem: 0
-    cheatType: 0
-    level: 0
-  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
-    type: 0
-    foodType: 2
-    weaponType: 1
-    usageType: 1
-    animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
     useVFX: {fileID: 0}
-    damage: 2
-    maxDurability: 1
-    pushForce: 1000
-    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
-      type: 3}
-    isQuestItem: 0
-    cheatType: 0
-    level: 0
-  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
-    type: 0
-    foodType: 2
-    weaponType: 1
-    usageType: 1
-    animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
-    useVFX: {fileID: 0}
-    damage: 2
-    maxDurability: 1
-    pushForce: 1000
-    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
-      type: 3}
-    isQuestItem: 0
-    cheatType: 0
-    level: 0
-  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
-    type: 0
-    foodType: 2
-    weaponType: 1
-    usageType: 1
-    animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
-    useVFX: {fileID: 0}
-    damage: 2
-    maxDurability: 1
-    pushForce: 1000
-    selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
-      type: 3}
-    isQuestItem: 0
-    cheatType: 0
-    level: 0
-  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
-    type: 0
-    foodType: 2
-    weaponType: 1
-    usageType: 1
-    animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
-    useVFX: {fileID: 0}
-    damage: 2
+    damage: 3
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 171737233300506709, guid: cd3e7b6bf66cede479a10e52d4819bc9,
@@ -66478,84 +66513,89 @@ MonoBehaviour:
     cheatType: 0
     level: 0
   propsPool:
-  - icon: {fileID: 0}
-    type: 0
+  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
+    type: 2
     foodType: 2
-    weaponType: 0
-    usageType: 0
+    weaponType: 1
+    usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 0
-    maxDurability: 1
+    damage: 5
+    maxDurability: 3
     pushForce: 1000
     selfItem: {fileID: 5046333098017190465, guid: 4331ef3dd977af14ca5ced82fe59c1d6,
       type: 3}
     isQuestItem: 0
     cheatType: 0
     level: 0
-  - icon: {fileID: 0}
+  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
     type: 2
-    foodType: 0
+    foodType: 1
     weaponType: 0
     usageType: 0
     animationType: 0
     sfx: 0
-    destroyVFX: {fileID: 0}
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 0
-    maxDurability: 1
+    damage: 5
+    maxDurability: 3
     pushForce: 1000
     selfItem: {fileID: 1276111137296086213, guid: b61f0456c8eeb5948bdb748cca55cfef,
       type: 3}
     isQuestItem: 0
     cheatType: 0
     level: 0
-  - icon: {fileID: 0}
-    type: 0
+  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
+    type: 2
     foodType: 1
     weaponType: 0
     usageType: 0
     animationType: 0
     sfx: 0
-    destroyVFX: {fileID: 0}
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 0
-    maxDurability: 1
+    damage: 5
+    maxDurability: 3
     pushForce: 1000
     selfItem: {fileID: -8479915785062098134, guid: 836d8b1a4fa2a004d96860b4e58a58c3,
       type: 3}
     isQuestItem: 0
     cheatType: 0
     level: 0
-  - icon: {fileID: 0}
+  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
     type: 2
     foodType: 0
     weaponType: 1
     usageType: 0
     animationType: 0
     sfx: 0
-    destroyVFX: {fileID: 0}
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 0
-    maxDurability: 1
+    damage: 5
+    maxDurability: 3
     pushForce: 1000
     selfItem: {fileID: 974243702538862656, guid: d1bde6e2a1ad97b47baddfd322827f19,
       type: 3}
     isQuestItem: 0
     cheatType: 0
     level: 0
-  - icon: {fileID: 0}
+  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
     type: 2
-    foodType: 0
+    foodType: 3
     weaponType: 1
-    usageType: 0
+    usageType: 1
     animationType: 1
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 0
+    damage: 5
     maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 2589516739636836551, guid: f898c007cbaec774ea2a008ff1111459,
@@ -66563,17 +66603,18 @@ MonoBehaviour:
     isQuestItem: 0
     cheatType: 0
     level: 0
-  - icon: {fileID: 0}
+  - icon: {fileID: -447736780349589760, guid: fc5d6eb745498304f94f6582ca00fd55, type: 3}
     type: 2
     foodType: 0
-    weaponType: 0
-    usageType: 0
+    weaponType: 1
+    usageType: 1
     animationType: 0
-    sfx: 0
-    destroyVFX: {fileID: 0}
+    sfx: 3
+    destroyVFX: {fileID: 877145938194034416, guid: 01a60aaec8dee7842ab90fb5bedb56ec,
+      type: 3}
     useVFX: {fileID: 0}
-    damage: 0
-    maxDurability: 0
+    damage: 3
+    maxDurability: 1
     pushForce: 1000
     selfItem: {fileID: 8134519426570011309, guid: c19c4c99bfdcf1241b214a93e00e2f6c,
       type: 3}
@@ -67319,6 +67360,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1458337840}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1458512230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2543394778021140951, guid: 793bbcd811d269b4e929aaaddd486a57,
+    type: 3}
+  m_PrefabInstance: {fileID: 183895570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61eb2deabfbb9784aa390fec8327e1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1459230634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91270,7 +91323,7 @@ MonoBehaviour:
   BricksCount: 20
   brickPrefab: {fileID: 2843601760557656872, guid: 090fae2b93ba9e2469c3a866f6f95c08,
     type: 3}
-  explosionForce: 200
+  explosionForce: 10
 --- !u!1 &1972555936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a6d080609302bc540bd7e7b6a4b9a3ae,

@@ -126,8 +126,8 @@ MonoBehaviour:
   preferedFoodType: 1
   doorAnim: {fileID: 7633307083018283442}
   isDoorOpened: 0
-  spawnPoint: {fileID: 2543394777704412207}
-  MoveToPoint: {fileID: 2543394777990562378}
+  spawnPoint: {fileID: 2543394777990562378}
+  MoveToPoint: {fileID: 2543394777704412207}
   enemyCount: 0
   maxEnemyCount: 5
   spawnInterval: 1

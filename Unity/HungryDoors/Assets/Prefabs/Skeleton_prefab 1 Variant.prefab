@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton_prefab 1 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8326392303557715343, guid: 40cfb4efd1da94d499ca842267fe2a4f,
+        type: 3}
+      propertyPath: lootPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8326392303557715350, guid: 40cfb4efd1da94d499ca842267fe2a4f,
         type: 3}
       propertyPath: m_RootOrder

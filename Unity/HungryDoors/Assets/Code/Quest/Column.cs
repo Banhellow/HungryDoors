@@ -31,12 +31,12 @@ public class Column : MonoBehaviour
     {
         for (int i = 0; i < BricksCount; i++)
         {
-            var brick = itemManager.InstantiateItem(brickPrefab, transform.position, Quaternion.identity);
+            var brick = itemManager.InstantiateItem(brickPrefab, transform.position + Vector3.up * 3, Quaternion.identity);
             var brickRB = brick.GetComponent<Rigidbody>();
             brickRB.isKinematic = false;
             Vector3 point = Random.onUnitSphere;
-            point.y = transform.position.y;
-            brickRB.AddForce((point - transform.position).normalized * explosionForce);
+            point.y = transform.position.y + 3;
+            brickRB.AddForce((point - (transform.position + Vector3.up * 3)).normalized * explosionForce);
         }
     }
 

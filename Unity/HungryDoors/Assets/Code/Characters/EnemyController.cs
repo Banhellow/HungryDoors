@@ -14,7 +14,7 @@ public class EnemyController : Character
     public EnemyState currentState;
 
     [Inject]
-    ItemManager itemManager;
+    public ItemManager itemManager;
 
 
     [Header("Partol")]

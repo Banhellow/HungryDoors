@@ -17,7 +17,7 @@ public class Item : MonoBehaviour, IUsable
     private GUIManager GUIManager;
     protected ItemManager itemManager;
     protected SoundManager soundManager;
-    private DoorController doorController;
+    protected DoorController doorController;
     private bool _isInUsage = false;
     public bool _hasLanded = true;
     public bool isOwnByPlayer = false;
@@ -57,11 +57,8 @@ public class Item : MonoBehaviour, IUsable
         else if(collision.gameObject.CompareTag(Tags.PICKUP_ITEM) && _isUsed)
         {
             var item = collision.gameObject.GetComponent<Item>();
-            if(item.isInUsage)
-            {
-                isInUsage = false;
-                ChangeItemDurability(item.data.damage);
-            }
+            if(!item._isUsed)
+                item.ChangeItemDurability(data.damage);
         }
     }
 
@@ -74,7 +71,7 @@ public class Item : MonoBehaviour, IUsable
         else
         {
             _isUsed = true;
-            DOVirtual.DelayedCall(0.2f, ()=> _isUsed = false);
+            DOVirtual.DelayedCall(0.1f, ()=> _isUsed = false);
             return ChangeItemDurability(1);
         }
 
@@ -148,8 +145,6 @@ public class Item : MonoBehaviour, IUsable
         Destroy(pickupVisuals);
         if (data.isQuestItem)
             doorController.GiveCheat(data.level, data.cheatType);
-        //Destroy(GetComponent<Rigidbody>());
-        //Destroy(GetComponent<CapsuleCollider>());
         isInUsage = true;
     }
 }

@@ -118,4 +118,5 @@ public class ItemManager : MonoBehaviour
         Debug.Log("RigidBodies added: " + newRbCounter);
         Debug.Log("RigidBodies binded: " + unbindCounter);
     }
+
 }
