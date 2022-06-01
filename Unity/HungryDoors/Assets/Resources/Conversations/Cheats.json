@@ -1,0 +1,65 @@
+[
+  {
+    "level": 1,
+    "hint": "A",
+    "cheatPL": "“Jesteś tym co jesz”",
+    "meaning": "wskazówka na drewno",
+    "cheatEN": "You are what you eat."
+  },
+  {
+    "level": 1,
+    "hint": "B",
+    "cheatPL": "“Narzędzie do rąbania służy do zadania”",
+    "meaning": "wskazówka na siekierę",
+    "cheatEN": "How do you chop your food?"
+  },
+  {
+    "level": 1,
+    "hint": "C",
+    "cheatPL": "“Chcesz, abym się tym udławił?”",
+    "meaning": "wskazówka na zniszczenie mebli",
+    "cheatEN": "You want me to choke on this?"
+  },
+  {
+    "level": 2,
+    "hint": "A",
+    "cheatPL": "“Mam bardzo twarde zęby”",
+    "meaning": "wskazówka na cegłę",
+    "cheatEN": "My teeth will cut through anything!"
+  },
+  {
+    "level": 2,
+    "hint": "B",
+    "cheatPL": "“znajdziesz mnie tam gdzie niebo łączy z ziemią”",
+    "meaning": "wskazówka na kolumnę",
+    "cheatEN": "Where the ground meets the sky I am waiting."
+  },
+  {
+    "level": 2,
+    "hint": "C",
+    "cheatPL": "“trzeba rozbić jajka żeby zrobić omlet”",
+    "meaning": "wskazówka na zniszczenie kolumny",
+    "cheatEN": "Can't make an omelette without breaking some eggs."
+  },
+  {
+    "level": 3,
+    "hint": "A",
+    "cheatPL": "“jem żywe rzeczy”",
+    "meaning": "wskazanie na gracza",
+    "cheatEN": "I only eat living things."
+  },
+  {
+    "level": 3,
+    "hint": "B",
+    "cheatPL": "“jem tylko ostre rzeczy”",
+    "meaning": "wskazanie na miecz",
+    "cheatEN": "My taste is very sharp."
+  },
+  {
+    "level": 3,
+    "hint": "C",
+    "cheatPL": "“teraz tylko Ty zostałeś przy życiu”",
+    "meaning": "wskazanie na gracza z mieczem",
+    "cheatEN": "You're the last living thing here."
+  }
+]
